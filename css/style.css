@@ -1,0 +1,109 @@
+#pageCarousel .card-body, #pageSection .card-body {
+    font-family: 'Kiwi Maru', serif;
+    color: whitesmoke; 
+}
+
+#pageCarousel .card-header {
+    font-family: 'Kiwi Maru', serif !important;
+}
+
+#pageCarousel {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#usluga a:visited {
+    color: whitesmoke !important;
+}
+
+a#next.carousel-control-next, a#prev {
+    display: none;
+}
+
+.navbar a {
+    color: white;
+    font-family: 'Kiwi Maru', serif;
+}
+
+#menuList {
+    z-index: 1 !important;
+}
+
+#menuList ul li a:hover {
+    color: yellow
+}
+
+#menuList ul li a {
+    opacity: 0.8;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.active-page {
+    color: yellow !important;
+    text-decoration: underline !important;
+}
+
+@media only screen and (max-width: 990px) {
+    #menuList {
+        background-color: black !important;
+    }
+}
+
+body {
+    background-image: url('../images/spacebg.jpg');
+    background-size: cover;
+    width: 100vh;
+    height: 100vw;
+}
+
+#mainContent p, h2 {
+    margin: 4rem 4rem 0 0;
+}
+
+div#navbar {
+    border-radius: 10px;
+}
+
+nav {
+    height: 40px;
+}
+
+#navContent {
+    background-image: linear-gradient(to bottom right, black, navy);
+    border-radius: 10px;
+    width: 70vw;
+    margin-left: 5vw;
+    font-size: 0.8rem;
+}
+
+#navContent li, #navContent a {
+    margin: 0.1rem 0;
+    padding: 0.1rem 0;
+}
+
+#pageSection > *, div.card {
+    border-radius: 20px 20px 0 0 !important;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+div.card-header {
+    text-align: center !important;
+    color: white !important;
+    background-image: linear-gradient(to right bottom, black,blue);
+    border-radius: 20px 20px 0 0 !important;
+}
+
+div.card-body {
+    min-height: 100%;
+    background-color: rgb(21, 27, 141, 0.5);
+    background-size: cover;
+    background-clip: unset;
+}
+
+.noBar::-webkit-scrollbar {
+    display: none;
+}
+
+.price {
+    margin: 0.5rem 1.5rem 2rem 0 !important;
+}
