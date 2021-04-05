@@ -51,8 +51,8 @@ const carousel = new Carousel()
 // adds active-page class to nav element on slide
 const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
-        if ($('.carousel-item').hasClass('active')) {
-            $('#menuList li a').removeClass('active-page')
+        $('#menuList li a').removeClass('active-page')
+        if ($('.carousel-item').hasClass('active')) {            
             let navIndex = $('#pageCarousel .active').index()
             
             $('#menuList li a').eq(navIndex).addClass('active-page')
