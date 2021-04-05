@@ -15,7 +15,7 @@ export class SectionOpinions {
             }
         })
                 
-        return `<div class="card my-5 w-75 mx-auto noBar" style="height: 30rem; overflow: auto;">
+        return `<div class="card mt-5 mt-md-0 w-75 mx-auto noBar" style="height: 30rem; overflow: auto;">
                     <div class="card-header">Leave your opinion</div>
                     <div class="card-body p-1" id="opinionsContainer">
                         <form class="form-group">

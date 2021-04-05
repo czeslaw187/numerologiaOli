@@ -6,8 +6,7 @@ export class ContactUs {
                         <h1>Kontakt</h1>
                     </div>
                     <div class="card-body">
-                        <h2 class="card-title">Kontakt</h2>
-                        <p class="card-text">
+                        <p class="card-text m-auto">
                             CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT 
                             CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT 
                             CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT 

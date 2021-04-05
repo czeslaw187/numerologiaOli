@@ -1,3 +1,8 @@
+#topSection {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+
 #pageCarousel .card-body, #pageSection .card-body {
     font-family: 'Kiwi Maru', serif;
     color: whitesmoke; 
@@ -93,7 +98,7 @@ div.card-header {
     border-radius: 20px 20px 0 0 !important;
 }
 
-div.card-body {
+div.card-body, #pageSection .card {
     min-height: 100%;
     background-color: rgb(21, 27, 141, 0.5);
     background-size: cover;

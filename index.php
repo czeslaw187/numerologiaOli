@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="./vendors/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body style="width: 100vw; height: 100vw">
+<body style="width: 100vw; height: 100vw" class="noBar">
     <div id="main" class="mx-0">
         <div class="container-fluid" style="height: 35vh;" id="topSection"></div>
         <div class="container-fluid my-5 p-0" id="navContent"></div>
