@@ -1,9 +1,11 @@
 <?php
 
+require_once('../config.php');
+
 $name = $_POST['name'];
 $opinion = $_POST['opinion'];
 
-$conn = new mysqli('localhost', 'root', '', 'numerologia', 3306);
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name, $db_port);
 
 if ($conn->connect_error) {
     $output['message'] = 'Connection error';
