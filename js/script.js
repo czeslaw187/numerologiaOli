@@ -52,8 +52,9 @@ const carousel = new Carousel()
 const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
         if ($('.carousel-item').hasClass('active')) {
-            let navIndex = $('#pageCarousel .active').index()
             $('#menuList li a').removeClass('active-page')
+            let navIndex = $('#pageCarousel .active').index()
+            
             $('#menuList li a').eq(navIndex).addClass('active-page')
             let pageTitle = $('#menuList li a').eq(navIndex).html()
             $('title').html(`Numerologia - ${pageTitle}`) // dynamic page title     
