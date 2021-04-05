@@ -2,7 +2,7 @@ export class SectionContact {
 
     displaySectionContact () {
 
-        return `<div class="card w-75 mx-auto">
+        return `<div class="card w-75 mr-auto">
                     <div class="card-header">Contact Us</div>
                     <div class="card-body">
                     <p>Phone</p>
