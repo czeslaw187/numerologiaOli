@@ -1,6 +1,8 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "numerologia", 3306);
+require_once('../config.php');
+
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name, $db_port);
 $output;
 if ($conn->connect_error) {
     $output['error'] = $conn->connect_error;
