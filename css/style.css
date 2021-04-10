@@ -3,41 +3,44 @@
     font-weight: bold;
 }
 
-#pageCarousel .card-body, #pageSection .card-body {
-    font-family: 'Kiwi Maru', serif;
+#pageCarousel .card-body, #pageSection .card-body, button, .contactForm {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 1.1rem;
     color: whitesmoke; 
 }
 
 #pageCarousel .card-header {
-    font-family: 'Kiwi Maru', serif !important;
+    font-family: 'Aref Ruqaa', serif !important;
 }
 
 #pageCarousel {
     background-color: rgba(255, 255, 255, 0);
 }
 
-#usluga a:visited {
+#usluga button:visited {
     color: whitesmoke !important;
 }
+
 
 a#next.carousel-control-next, a#prev {
     display: none;
 }
 
-.navbar a {
+.navbar button {
     color: white;
-    font-family: 'Kiwi Maru', serif;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 1.5rem;
 }
 
 #menuList {
     z-index: 1 !important;
 }
 
-#menuList ul li a:hover {
+#menuList ul li button:hover {
     color: yellow
 }
 
-#menuList ul li a {
+#menuList ul li button {
     opacity: 0.8;
     margin: 0 1rem;
     font-weight: bold;
@@ -81,7 +84,7 @@ nav {
     font-size: 0.8rem;
 }
 
-#navContent li, #navContent a {
+#navContent li, #navContent button {
     margin: 0.1rem 0;
     padding: 0.1rem 0;
 }
@@ -100,9 +103,20 @@ div.card-header {
 
 div.card-body, #pageSection .card {
     min-height: 100%;
-    background-color: rgb(21, 27, 141, 0.5);
-    background-size: cover;
-    background-clip: unset;
+    background-color: rgb(21, 27, 141, 0.5) !important;
+    background-size: cover !important;
+    background-clip: unset !important;
+}
+
+#usluga li {
+    background-color: rgb(21, 27, 141, 0) 
+}
+
+#usluga input {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    width: 3rem;
+    color: white;
 }
 
 .noBar::-webkit-scrollbar {
@@ -111,4 +125,8 @@ div.card-body, #pageSection .card {
 
 .price {
     margin: 0.5rem 1.5rem 2rem 0 !important;
+}
+
+#numerBody * {
+    color: whitesmoke !important;
 }

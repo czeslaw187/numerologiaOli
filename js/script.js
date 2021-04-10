@@ -42,31 +42,31 @@ const cyfraDnia = new Cyfra()
 // declaring subpages calsses
 const stronaKarta = new StronaKarta()
 
-// array of background images
-const imgArr = ['./images/bgflower1.jpg', './images/bgflower2.jpg', './images/bgflower3.jpg', './images/bgflower4.jpg', './images/bgflower5.jpg']
-
 // declare carousel instance
 const carousel = new Carousel() 
 
 // adds active-page class to nav element on slide
 const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
-        $('#menuList li a').removeClass('active-page')
-        if ($('.carousel-item').hasClass('active')) {            
-            let navIndex = $('#pageCarousel .active').index()            
-            $('#menuList li a').eq(navIndex).addClass('active-page')
-            let pageTitle = $('#menuList li a').eq(navIndex).html()
+        if ($('.carousel-item').hasClass('active')) {
+            let navIndex = $('#pageCarousel .active').index()
+            $('#menuList li button').removeClass('active-page')
+            $('#menuList li button').eq(navIndex).addClass('active-page')
+            let pageTitle = $('#menuList li button').eq(navIndex).html()
             $('title').html(`Numerologia - ${pageTitle}`) // dynamic page title     
             // render section content on slide
             if (pageTitle == `O Mnie`) {
                 $('#mainContent .active').html(aboutMe.displayAboutMe())
-                $('#pageSection').html(kartaDnia.displayKarta(imgArr)).append(kartaDnia.displayFbAndYou())
+                $('#pageSection').html(kartaDnia.displayKarta()).append(kartaDnia.displayFbAndYou())
+                // handle subpage of about me 
                 $('#randomCard').on('click', ()=> {
                     let image = kartaDnia.randomNumber
-                    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image))
+                    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image['path'][0], image['text']))
                 })
-            } else if (pageTitle == 'Numerologia') {
-                $('#pageSection').html(cyfraDnia.displayCyfra()).append(kartaDnia.displayFbAndYou())           
+            } else if (pageTitle == 'Numerologia') {   
+                $('#mainContent .active').html(numerologia.displayNumerologia())             
+                $('#pageSection').html(cyfraDnia.displayCyfra()).append(kartaDnia.displayFbAndYou())  
+                cyfraDnia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
                 $('#pageSection').html('')
             } else if (pageTitle == 'Uslugi') {
@@ -87,22 +87,27 @@ $('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitl
 $('#navContent').html(head.displayHeader()) // render navbar
 $('#mainContent').html(carousel.displayCarousel(contentArray)) // render main content
 $('#about').addClass('active-page') // set active-page on page load
-$('#pageSection').html(kartaDnia.displayKarta(imgArr)).append(kartaDnia.displayFbAndYou())
+$('#pageSection').html(kartaDnia.displayKarta()).append(kartaDnia.displayFbAndYou())
 $('title').html(`Numerologia - Glowna`) // set page title to 'Home'
 
-highlightNav() //activte add active-page class
+highlightNav() // invoke add active-page class
 
+$('#randomCard').on('click', ()=> {
+    let image = kartaDnia.randomNumber
+    console.log(image)
+    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image['path'][0], image['text']))
+})
 // navigation buttons logics
-$('#menuList li a').on('click', (e)=> {    
-    $('#menuList li a').removeClass('active-page');
+$('#menuList li button').on('click', (e)=> {    
+    $('#menuList li button').removeClass('active-page');
     $(e.target).addClass('active-page')
     switch(e.target.innerHTML) { 
         case 'O Mnie':            
-            $('#pageCarousel').carousel(0)
-            $('#mainContent .active').html(aboutMe.displayAboutMe())          
+            $('#pageCarousel').carousel(0)       
             break;
         case 'Numerologia':
             $('#pageCarousel').carousel(1)
+            cyfraDnia.cyfraHandler()   
             break;
         case 'Posty':
             $('#pageCarousel').carousel(2)
@@ -128,9 +133,4 @@ $('#submitOpinion').on('click', (e)=> {
     sectionOpinions.insertOpinion(opinionName, opinionContent)
 })
 
-// handle subpages 
-$('#randomCard').on('click', ()=> {
-    let image = kartaDnia.randomNumber
-    console.log(image)
-    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image))
-})
+

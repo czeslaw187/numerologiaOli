@@ -15,17 +15,18 @@ export class SectionOpinions {
             }
         })
                 
-        return `<div class="card mt-5 mt-md-0 w-75 mx-auto noBar" style="height: 30rem; overflow: auto;">
-                    <div class="card-header">Leave your opinion</div>
+        return `<div class="card mt-5 mt-md-0 w-75 mr-auto ml-0 noBar" style="height: 30rem; overflow: auto;">
+                    <div class="card-header">Zostaw Opinię</div>
                     <div class="card-body p-1" id="opinionsContainer">
-                        <form class="form-group">
-                            <label for="opinionName">Name</label>
-                            <input type="text" name="opinionName" id="opinionName" class="form-control" required />
-                            <label for="yourOpinion">Your message</label>
-                            <textarea name="yourOpinion" id="yourOpinion" class="form-control" columns="10" rows="7" placeholder="Enter your message..." required></textarea>
-                            <button role="button" class="btn btn-secondary mt-2" id="submitOpinion">Submit</button>
-                        </form>                        
+                                                
                     </div>
+                    <form class="form-group contactForm">
+                        <label for="opinionName">Imię</label>
+                        <input type="text" name="opinionName" id="opinionName" class="form-control" required />
+                        <label for="yourOpinion">Twoja Opinia</label>
+                        <textarea name="yourOpinion" id="yourOpinion" class="form-control" columns="10" rows="7" placeholder="Enter your message..." required></textarea>
+                        <button role="button" class="btn btn-secondary mt-2" id="submitOpinion">Wyślij</button>
+                    </form>
                 </div>`
     }
 

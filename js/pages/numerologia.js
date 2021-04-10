@@ -1,7 +1,7 @@
 export class Numerologia {
     
     displayNumerologia() {
-        return `<div class="card mx-2">
+        return `<div class="card mx-2" id="stronaNumerologia">
                     <div class="card-header">
                         <h1>Numerologia</h1>
                     </div>

@@ -1,17 +1,19 @@
 export class StronaKarta {
 
-    displayStronaKarta(image) {
+    displayStronaKarta(image, text) {
 
-        return `<div class="card-header">
-                    <h1>P</h1>
+        return `<div class="card-header" style="height: 4rem;">
                 </div>
-                <div class="card-body">
-                    <img src="${image}" alt="image" class="w-50 h-50 pull-left pr-3 pb-3" style="margin: auto auto;" />  
-                    <p class="m-0"> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                    Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                    Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                    Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                    Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>      
+                <div class="card-body w-100">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <img src="${image}" alt="image" class="w-100 h-100" />  
+                            
+                        </div>
+                        <div class="col-12 col-md-6">
+                            ${text}
+                        </div>
+                    </div>      
                 </div>`
     }
 }
