@@ -73,6 +73,7 @@ const highlightNav = () => {
                 $('#pageSection').html(sectionOpinions.displaySectionOpinions())
             } else if (pageTitle == 'Kontakt') {
                 $('#pageSection').html(sectionContact.displaySectionContact())
+                sectionContact.handleContactForm()
             }
         }
     })

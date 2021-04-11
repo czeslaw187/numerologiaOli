@@ -5,69 +5,61 @@ export class Cyfra {
         return `<div class="card w-75" id="obliczDrogeZycia">
                     <div class="card-header">Oblicz Drogę Życia</div>
                     <div class="card-body text-center">
-                        <form id="formDrogi">
+                        <form id="formDrogi text-center">
                             <label for="day">Wpisz Date Urodzenia</label>
-                            <div class="form-row form-group">
-                                <div class="col">
-                                    <input type="number" id="day" name="day" class="form-control" min="01" max="31" placeholder="dd" required/>
-                                </div>
-                                <div class="col">
-                                    <input type="number" id="month" name="month" class="form-control" min="1" max="12" placeholder="mm" required/>
-                                </div>
-                                <div class="col">
-                                    <input type="number" id="year" name="year" class="form-control" min="1900" placeholder="yyyy" required/>
-                                </div>                                
-                            </div>
-                            <button role="submit" id="obliczDroge" class="btn btn-outline-primary">Oblicz</button>                             
+                            <p class="text-center">dd-mm-yyyy</p>
+                            <p id="dateError" class="text-danger"></p>
+                            <input type="text" id="day" name="day" class="form-control w-75 text-center mx-auto" min="01-01-1900" pattern= required/>
+                            <button role="submit" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</button>                             
                         </form>
                     </div>
                 </div>`
     }
 
     cyfraHandler() {
+        $('#obliczDrogeZycia input#day').on('keyup', (e)=> {
+            if (e.target.value.length == 2 || e.target.value.length == 5) {
+                e.target.value += `-`
+            }
+        })
 
         $('#obliczDroge').bind('click', (e)=>{
             e.preventDefault()
+            $('#dateError').html('')
             let day = $('#day').val();
-            let month = $('#month').val();
-            let year = $('#year').val();   
-            let suma = 0
-            day = day.split('')
-            month = month.split('')
-            year = year.split('')
-            let cyfra = []
-            day.forEach(i=> {
-                cyfra.push(i)
-            })
-            month.forEach(i=> {
-                cyfra.push(i)
-            })
-            year.forEach(i=> {
-                cyfra.push(i)
-            })
-            cyfra.forEach(i=> {
-                suma += parseInt(i)
-            })
-            suma = suma.toString()
-            suma = suma.split('')
-            cyfra = 0
-            suma.forEach(i=> {
-                cyfra += parseInt(i)
-            })            
+            let regexp = new RegExp("[0-9]{2}-[0-9]{2}-[0-9]{4}")
+            if (regexp.test(day)) {
+                day = day.split('-').join('')
+                day = day.toString().split('')
+                let total1 = 0
 
-            $('#stronaNumerologia').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
-                                           <div class="card-body" id="numerBody"></div>`)
+                day.forEach(i=> {
+                    total1 += parseInt(i)
+                })
+                total1 = total1.toString().split('')
+                let cyfra = 0
+                
+                total1.forEach(i=> {
+                    cyfra += parseInt(i)
+                })       
 
-            $.ajax({
-             url: './php/getNumber.php',
-             type: 'post',
-             data: {cyfra: cyfra},
-             dataType: 'json',
-             success: result=> {
-                 console.log(result)
-                 $('#numerBody').append(`${result['text']}`)
-             }
-             })
+                $('#stronaNumerologia').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
+                                            <div class="card-body" id="numerBody"></div>`)
+
+                $.ajax({
+                url: './php/getNumber.php',
+                type: 'post',
+                data: {cyfra: cyfra},
+                dataType: 'json',
+                success: result=> {
+                    console.log(result)
+                    $('#numerBody').append(`${result['text']}`)
+                }
+                })
+            } else {
+                $('#dateError').html(`Zły format`)
+            }
+            
 
         })
     }        

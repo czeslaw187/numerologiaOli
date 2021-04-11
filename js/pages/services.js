@@ -6,8 +6,8 @@ export class ServicesUs {
                         <h1>USŁUGI</h1>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
+                        <ul>
+                            <li>
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails1.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">260 zł</span>
@@ -26,7 +26,7 @@ export class ServicesUs {
                                     </div>                                    
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li>
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails2.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">125 zł</span>
@@ -34,7 +34,7 @@ export class ServicesUs {
                                     <p class="mt-2">( Energetyka imienia może wiele zmienić, warto dobrać je tak aby było ono korzystne)</p>                        
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li>
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails3.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">180 zł</span>
@@ -46,7 +46,7 @@ export class ServicesUs {
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li>
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails4.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">100 zł</span>
@@ -63,7 +63,7 @@ export class ServicesUs {
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li>
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails5.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">65 zł</span>

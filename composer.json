@@ -1,6 +1,7 @@
 {
     "require": {
         "monolog/monolog": "1.0.*@beta",
-        "worldpay/worldpay-lib-php": "^2.1"
+        "worldpay/worldpay-lib-php": "^2.1",
+        "swiftmailer/swiftmailer": "^6.0"
     }
 }
