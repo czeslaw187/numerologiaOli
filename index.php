@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="aythor" content="Grzegorz Michniewicz">
     <meta name="keywords" content="numerologia, tarot, portret numerologiczny">
-    <title></title>
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title></title>    
     <link rel="stylesheet" href="./vendors/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 <body style="width: 100vw; height: 100vw" class="noBar">
     <div id="main" class="mx-0">
