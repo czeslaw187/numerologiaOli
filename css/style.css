@@ -9,7 +9,7 @@
 }
 
 #mainContent .card-body {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #pageCarousel .card-header {
@@ -31,7 +31,7 @@ a#next.carousel-control-next, a#prev {
 .navbar button {
     color: white;
     font-family: 'Aref Ruqaa', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #menuList {
