@@ -73,6 +73,7 @@ const highlightNav = () => {
                 posty.setionPostyHandler(posty.postArr)
             } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(sectionOpinions.displaySectionOpinions())
+                sectionOpinions.insertOpinionhandler()
             } else if (pageTitle == 'Kontakt') {
                 $('#pageSection').html(sectionContact.displaySectionContact())
                 sectionContact.handleContactForm()
