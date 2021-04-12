@@ -7,7 +7,7 @@ export class SectionOpinions {
             dataType: 'json',
             success: result=> {
                 result.forEach(row=> {
-                    $('#opinionsContainer').append(`<div class="my-3" style="width: 100%; border: 1px solid black" id="useropinion${row['id']}">
+                    $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;" id="useropinion${row['id']}">
                                                         <p class="py-0 my-0">${row['name']}</p>
                                                         <p class="py-0 my-0" style="font-size: 0.8rem"><em>${row['opinion']}</em></p>
                                                     </div>`)
