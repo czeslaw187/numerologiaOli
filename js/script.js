@@ -128,12 +128,5 @@ $('#menuList li button').on('click', (e)=> {
 
 
 
-// handle opinions
-$('#submitOpinion').on('click', (e)=> {
-    e.preventDefault()
-    let opinionName = $('#opinionName').val()
-    let opinionContent = $('#yourOpinion').val()
-    sectionOpinions.insertOpinion(opinionName, opinionContent)
-})
 
 

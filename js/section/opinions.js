@@ -30,26 +30,31 @@ export class SectionOpinions {
                 </div>`
     }
 
-    insertOpinion(name, opinion) {
-        console.log(name, opinion)
-        $.ajax({
-            url: './php/opinions/insertOpinion.php',
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                name: name,
-                opinion: opinion
-            },
-            success: result=> {
-                if (result['message'] == 'ok') {
-                    $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;">
-                                                        <p class="py-0 my-0">${name}</p>
-                                                        <p class="py-0 my-0" style="font-size: 0.8rem"><em>${opinion}</em></p>
-                                                    </div>`)
-                } else {
-                    alert(result['message'])
+    insertOpinionhandler() {
+        $('#submitOpinion').on('click', (e)=> {
+            e.preventDefault()
+            let name = $('#opinionName').val()
+            let opinion = $('#yourOpinion').val()
+            $.ajax({
+                url: './php/opinions/insertOpinion.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    name: name,
+                    opinion: opinion
+                },
+                success: result=> {
+                    if (result['message'] == 'ok') {
+                        $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;">
+                                                            <p class="py-0 my-0">${name}</p>
+                                                            <p class="py-0 my-0" style="font-size: 0.8rem"><em>${opinion}</em></p>
+                                                        </div>`)
+                    } else {
+                        alert(result['message'])
+                    }
                 }
-            }
+            })
         })
+        
     }
 }
