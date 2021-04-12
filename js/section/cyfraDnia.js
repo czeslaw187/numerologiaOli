@@ -20,6 +20,9 @@ export class Cyfra {
         $('#obliczDrogeZycia input#day').on('keyup', (e)=> {
             if (e.target.value.length == 2 || e.target.value.length == 5) {
                 e.target.value += `-`
+                if (e.target.value[2] == '-') {
+                    e.target.value[2].replace('-', '')
+                }
             }
         })
 
