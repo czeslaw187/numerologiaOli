@@ -6,6 +6,7 @@ export class SectionOpinions {
             method: 'get',
             dataType: 'json',
             success: result=> {
+                console.log(result)
                 result.forEach(row=> {
                     $('#opinionsContainer').append(`<div class="my-3" style="width: 100%; border: 1px solid black" id="useropinion${row['id']}">
                                                         <p class="py-0 my-0">${row['name']}</p>
