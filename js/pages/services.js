@@ -12,7 +12,8 @@ export class ServicesUs {
                                     <a type="button" href="php/worldpay/worldpayCreditDetails1.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">260 zł</span>
                                     <h3>Portret numerologiczny</h3>
-                                    <p class="mt-2"><a type="button" data-toggle="collapse" data-target="#ofertaTarot">( opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia)</a></p>                                                                
+                                    <p class="mt-2">( opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia)</p>
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaTarot">więcej...</a>                                                                
                                     <div class="collapse" id="ofertaTarot">
                                     Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez datę urodzenia 
                                     oraz imiona i nazwiska, które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech , 
@@ -39,7 +40,8 @@ export class ServicesUs {
                                     <a type="button" href="php/worldpay/worldpayCreditDetails3.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">180 zł</span>
                                     <h3>Numerologia Partnerska</h3>
-                                    <p class="mt-2"><a type="button" data-toggle="collapse" data-target="#ofertaPara">( Opis połączenia energetyki dwóch osób, partnerów)</a></p>                                                                
+                                    <p class="mt-2">( Opis połączenia energetyki dwóch osób, partnerów)</p>
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaPara">więcej...</a>                                                                
                                     <div class="collapse" id="ofertaPara">
                                     Opis taki zawiera informacje o dopasowaniu dwóch  energii, czy jest ona korzystna, 
                                     czy będzie wymagać więcej pracy nad związkiem i kompromisów. Na co zwrócić uwagę w związku, oraz opis tych energii. 
@@ -51,7 +53,8 @@ export class ServicesUs {
                                     <a type="button" href="php/worldpay/worldpayCreditDetails4.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">100 zł</span>
                                     <h3>Przesłanie od  Wróżek</h3>
-                                    <p class="mt-2"><a type="button" data-toggle="collapse" data-target="#ofertaPrzeslanie">(rokad trzech kart podpowiedzi + karta anielska)</a></p>                                                                
+                                    <p class="mt-2">(rokad trzech kart podpowiedzi + karta anielska)</p>
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaPrzeslanie">więcej...</a>                                                                
                                     <div class="collapse" id="ofertaPrzeslanie">
                                     Przesłania od Wróżek pozwolą Ci za zwrócenie uwagi na istotne kwestie w konkretnym przedziale czasu, 
                                     dadzą podpowiedzi abyś mógł lepiej i świadomiej wykorzystać swoje szanse i okazję.
@@ -68,7 +71,8 @@ export class ServicesUs {
                                     <a type="button" href="php/worldpay/worldpayCreditDetails5.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">65 zł</span>
                                     <h3>Dobór kryształu, kamienia do problemu</h3>
-                                    <p class="mt-2"><a type="button" data-toggle="collapse" data-target="#ofertaDobor">( napisz mi o swoim problemie, a ja podam Ci który z kryształów, kamieni wzmocnij Cię )</a></p>                                                                
+                                    <p class="mt-2">( napisz mi o swoim problemie, a ja podam Ci który z kryształów, kamieni wzmocnij Cię )</p>
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaDobor">więcej...</a>                                                                
                                     <div class="collapse" id="ofertaDobor">
                                     Każdy kryształ, kamień ma swoją unikalną i niepowtarzalną moc, 
                                     dzięki  ich energii możemy wzmocnić siebie, te obszary które wywołują u nas problemy np. 

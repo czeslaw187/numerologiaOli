@@ -1,5 +1,7 @@
 <?php
-include_once('config.php');
+
+include_once('../../config.php');
+
 $name = $_POST['name'];
 $opinion = $_POST['opinion'];
 

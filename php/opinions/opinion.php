@@ -1,5 +1,6 @@
 <?php
-include('../../config.php');
+
+include_once('../../config.php');
 
 $conn = new mysqli($db_host, $db_username, $db_password, $db_name, $db_port);
 $output;

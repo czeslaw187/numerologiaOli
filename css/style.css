@@ -3,26 +3,26 @@
     font-weight: bold;
 }
 
-#pageCarousel .card-body, #pageSection .card-body, button, .contactForm {
+#pageCarousel .card-body, #pageSection .card-body, button, .contactForm, #sectionPosty a, #posts, #pageSection h1 {
     font-family: 'Aref Ruqaa', serif;
-    font-size: 1.1rem;
     color: whitesmoke; 
+}
+
+#mainContent .card-body {
+    font-size: 1.5rem;
 }
 
 #pageCarousel .card-header {
     font-family: 'Aref Ruqaa', serif !important;
 }
 
-#pageCarousel {
+#pageCarousel, #posts li * {
     background-color: rgba(255, 255, 255, 0);
 }
 
 #usluga button:visited {
     color: whitesmoke !important;
 }
-
-
-
 
 a#next.carousel-control-next, a#prev {
     display: none;
@@ -131,4 +131,17 @@ div.card-body, #pageSection .card {
 
 #numerBody * {
     color: whitesmoke !important;
+}
+
+#sectionPosty a, #posts ul li, #sectionPosty .card-body {
+    background-color:rgb(21, 27, 141, 0) !important;
+}
+
+#sectionPosty a:hover {
+    cursor: pointer;
+    background-color: rgb(21, 27, 141, 0.5) !important;
+}
+
+#sectionPosty a:active {
+    background-color: rgb(21, 27, 141, 0.8) !important;
 }

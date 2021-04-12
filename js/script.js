@@ -68,8 +68,10 @@ const highlightNav = () => {
                 $('#pageSection').html(cyfraDnia.displayCyfra()).append(kartaDnia.displayFbAndYou())  
                 cyfraDnia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
-                $('#pageSection').html('')
-            } else if (pageTitle == 'Uslugi') {
+                $('#mainContent .active').html(posty.displayPosty())
+                $('#pageSection').html(posty.displaySectionPosty(posty.postArr))
+                posty.setionPostyHandler(posty.postArr)
+            } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(sectionOpinions.displaySectionOpinions())
             } else if (pageTitle == 'Kontakt') {
                 $('#pageSection').html(sectionContact.displaySectionContact())
@@ -113,7 +115,7 @@ $('#menuList li button').on('click', (e)=> {
         case 'Posty':
             $('#pageCarousel').carousel(2)
             break;    
-        case 'Uslugi':
+        case 'Usługi':
             $('#pageCarousel').carousel(3)
             break;
         case 'Kontakt':

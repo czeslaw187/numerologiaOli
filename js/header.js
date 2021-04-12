@@ -12,7 +12,7 @@ export class Header {
                             <li class='nav-item mx-3'><button role="button" id="about" href='#' class='btn nav-link'>O Mnie</button></li>
                             <li class='nav-item mx-3'><button role="button" id="numerologia" href='#' class='btn nav-link'>Numerologia</button></li>
                             <li class='nav-item mx-3'><button role="button" id="posty" href='#' class='btn nav-link'>Posty</button></li>
-                            <li class='nav-item mx-3'><button role="button" id="services" href='#' class='btn nav-link'>Uslugi</button></li>
+                            <li class='nav-item mx-3'><button role="button" id="services" href='#' class='btn nav-link'>Usługi</button></li>
                             <li class='nav-item mx-3'><button role="button" id="contact" href='#' class='btn nav-link'>Kontakt</button></li>
                         </ul>
                     </div>

@@ -17,7 +17,7 @@ export class Karta {
         })
 
         return `<div class="card mr-auto w-75">
-                    <div class="card-header"><h2 class="w-100">Karta Dnia</h2></div>                        
+                    <div class="card-header"><h1 class="w-100">Karta Dnia</h1></div>                        
                     <div class="card-body text-center">
                         <button id="randomCard" style="background-color: rgb(21, 27, 141, 0); border: none"><img src="images/przeslanie.jpg" class="w-75" /></button>
                     </div>

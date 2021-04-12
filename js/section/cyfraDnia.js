@@ -3,13 +3,13 @@ export class Cyfra {
     displayCyfra() {        
         
         return `<div class="card w-75" id="obliczDrogeZycia">
-                    <div class="card-header">Oblicz Drogę Życia</div>
+                    <div class="card-header"><h1>Oblicz Drogę Życia</h1></div>
                     <div class="card-body text-center">
                         <form id="formDrogi text-center">
                             <label for="day">Wpisz Date Urodzenia</label>
                             <p class="text-center">dd-mm-yyyy</p>
                             <p id="dateError" class="text-danger"></p>
-                            <input type="text" id="day" name="day" class="form-control w-75 text-center mx-auto" min="01-01-1900" pattern= required/>
+                            <input type="text" id="day" name="day" class="form-control w-75 text-center mx-auto" maxlength="10" required/>
                             <button role="submit" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</button>                             
                         </form>
                     </div>
@@ -17,11 +17,14 @@ export class Cyfra {
     }
 
     cyfraHandler() {
-        $('#obliczDrogeZycia input#day').on('keyup', (e)=> {
-            if (e.target.value.length == 2 || e.target.value.length == 5) {
-                e.target.value += `-`
-                if (e.target.value[2] == '-') {
-                    e.target.value[2].replace('-', '')
+        let str = ''
+        let el = ''
+        $('#obliczDrogeZycia input#day').on('keypress', (e)=> {  
+          
+            if (e.keyCode != 8) {
+                if (e.target.value.length == 2 || e.target.value.length == 5) {
+                    
+                    e.target.value += '-'
                 }
             }
         })
