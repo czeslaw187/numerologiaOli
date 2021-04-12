@@ -42,7 +42,7 @@ export class SectionOpinions {
             },
             success: result=> {
                 if (result['message'] == 'ok') {
-                    $('#opinionsContainer').append(`<div class="my-3" style="width: 100%; border: 1px solid black">
+                    $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;">
                                                         <p class="py-0 my-0">${name}</p>
                                                         <p class="py-0 my-0" style="font-size: 0.8rem"><em>${opinion}</em></p>
                                                     </div>`)
