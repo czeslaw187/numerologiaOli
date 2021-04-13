@@ -17,13 +17,10 @@ export class Cyfra {
     }
 
     cyfraHandler() {
-        let str = ''
-        let el = ''
         $('#obliczDrogeZycia input#day').on('keypress', (e)=> {  
-          
-            if (e.keyCode != 8) {
-                if (e.target.value.length == 2 || e.target.value.length == 5) {
-                    
+            console.log(e.key)
+            if (e.key != 'Backspace') {
+                if (e.target.value.length == 2 || e.target.value.length == 5) {                    
                     e.target.value += '-'
                 }
             }
