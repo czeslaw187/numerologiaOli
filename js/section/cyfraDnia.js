@@ -17,7 +17,7 @@ export class Cyfra {
     }
 
     cyfraHandler() {
-        $('#obliczDrogeZycia input#day').on('keypress', (e)=> {  
+        $('#obliczDrogeZycia input#day').on('keyup', (e)=> {  
             console.log(e.key)
             if (e.key != 'Backspace') {
                 if (e.target.value.length == 2 || e.target.value.length == 5) {                    
