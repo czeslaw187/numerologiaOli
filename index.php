@@ -22,10 +22,10 @@
         <div class="container-fluid" style="height: 35vh;" id="topSection"></div>
         <div class="container-fluid my-5 p-0" id="navContent"></div>
         <div class="row my-5 p-0">
-            <div class="col-12 col-md-8 p-0">
+            <div class="col-8 p-0">
                 <div class="container-fluid justify-content-center" id="mainContent"></div>        
             </div>
-            <div class="col-12 col-md-4 p-0 mt-5 mt-md-0">
+            <div class="col-4 p-0 mt-5 mt-md-0">
                 <div class="container-fluid" id="pageSection"></div>
             </div>
         </div>
