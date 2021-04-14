@@ -5,7 +5,7 @@ export class AboutMe {
                      <div class="card-header">
                          <h1>O Mnie</h1>
                      </div>
-                     <div class="card-body">
+                     <div class="card-body p-0 p-md-2">
                         <img src="images/ola.jpg" class="h-25 w-25 pull-left mr-3" />
                         <h4 class="card-title mb-2">Kim jestem?</h4>
                         <p class="card-text m-auto">

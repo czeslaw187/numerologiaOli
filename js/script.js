@@ -27,7 +27,7 @@ const posty = new Posty()
 
 let contentArray = [
     aboutMe.displayAboutMe(),
-    numerologia.displayNumerologia(), 
+    numerologia.displayPostyNumerologia(), 
     posty.displayPosty(),
     services.displayServices(),
     contact.displayContactUs(),
@@ -64,13 +64,13 @@ const highlightNav = () => {
                     $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image['path'][0], image['text']))
                 })
             } else if (pageTitle == 'Numerologia') {   
-                $('#mainContent .active').html(numerologia.displayNumerologia())             
-                $('#pageSection').html(cyfraDnia.displayCyfra()).append(kartaDnia.displayFbAndYou())  
+                $('#mainContent .active').html(numerologia.displayPostyNumerologia())             
+                $('#pageSection').html(cyfraDnia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr)).append(kartaDnia.displayFbAndYou())
+                numerologia.numerologiaHandler(numerologia.postArr)  
                 cyfraDnia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
                 $('#mainContent .active').html(posty.displayPosty())
-                $('#pageSection').html(posty.displaySectionPosty(posty.postArr))
-                posty.setionPostyHandler(posty.postArr)
+                $('#pageSection').html(posty.displaySectionPosty()).append(kartaDnia.displayFbAndYou())
             } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(sectionOpinions.displaySectionOpinions())
                 sectionOpinions.insertOpinionhandler()
@@ -128,6 +128,8 @@ $('#menuList li button').on('click', (e)=> {
 })
 
 
+
+// handle opinions
 
 
 

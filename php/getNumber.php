@@ -3,7 +3,7 @@
 include('./readDocx.php');
 
 if (isset($_POST['id']) && $_POST['id'] == 'post') {
-    $file = glob("../images/posty/*.docx");
+    $file = glob("../images/posty/*.docx", GLOB_NOSORT);
     $output = [];    
     $doc = new Docx_reader();
     for ($i = 0; $i < count($file); $i++) {

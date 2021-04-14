@@ -18,6 +18,7 @@ $result = $conn->query($sql);
 
 if ($result) {
     $output['message'] = 'ok';
+    $output['lastId'] = $conn->insert_id;
 } else {
     $output['message'] = 'Query error';
     $output['error'] = mysqli_error($conn);

@@ -2,7 +2,7 @@ export class Cyfra {
 
     displayCyfra() {        
         
-        return `<div class="card w-75" id="obliczDrogeZycia">
+        return `<div class="card w-75 mx-auto" id="obliczDrogeZycia">
                     <div class="card-header"><h1>Oblicz Drogę Życia</h1></div>
                     <div class="card-body text-center">
                         <form id="formDrogi text-center">
@@ -17,14 +17,8 @@ export class Cyfra {
     }
 
     cyfraHandler() {
-        $('#obliczDrogeZycia input#day').on('keyup', (e)=> {  
-            console.log(e.key)
-            if (e.key != 'Backspace') {
-                if (e.target.value.length == 2 || e.target.value.length == 5) {                    
-                    e.target.value += '-'
-                }
-            }
-        })
+
+        $('#obliczDrogeZycia input#day').mask('99-99-9999')
 
         $('#obliczDroge').bind('click', (e)=>{
             e.preventDefault()
@@ -46,7 +40,7 @@ export class Cyfra {
                     cyfra += parseInt(i)
                 })       
 
-                $('#stronaNumerologia').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
+                $('#numerologiaBody').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
                                             <div class="card-body" id="numerBody"></div>`)
 
                 $.ajax({

@@ -29,12 +29,12 @@ export class Carousel {
     displaySlideshow(content) {
         let imgArray = []
         
-        imgArray = `<div class="carousel-item active">
+        imgArray = `<div class="carousel-item pr-3 active">
                         <img src="${content[0]}" alt="" class="w-50" style="width: 20vw; height: 20vh">
                     </div>`
 
         for (let i = 1; i < content.length; i++) {
-            imgArray += `<div class="carousel-item">
+            imgArray += `<div class="carousel-item pr-3">
                           <img src="${content[i]}" alt="" class="w-50" style="width: 20vw; height: 20vh">
                       </div>`                      
         }

@@ -1,56 +1,25 @@
 export class Posty {
-    constructor(postArr = []) {
-        this.postArr = postArr
-    }
     
     displayPosty() {
-        
-        $.ajax({
-            url: 'php/getNumber.php',
-            type: 'post',
-            dataType: 'json',
-            data: {id: 'post'},
-            success: result=> {
-                $('#posts ul').append(`<li class="list-group-item">${result['text'][0]['content']}</li><hr>`)
-                this.postArr = result
-            }
-        })
         return `<div class="card mx-2">
-                    <div class="card-header">
-                        <h1>Posty</h1>
-                    </div>
-                    <div class="card-body" id="posts">
-                        <div class="container-fluid">
-                            <ul class="list-group list-group-flush">
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>`
-    }
-
-    
-    displaySectionPosty(theArr) {
-        let listOfPosts = []
-        theArr['text'].forEach(post=> {
-            listOfPosts += `<a id="${post['name']}" class="list-group-item list-group-item-action">${post['name']}</a>`
-        })
-        return `<div class="card w-75 mr-auto ml-0" id="sectionPosty">
-                    <div class="card-header"><h1>Spis Postów</h1></div>
+                    <div class="card-header"><h1>Posty</h1></div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            ${listOfPosts}
-                        </ul>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                 </div>`
     }
 
-    setionPostyHandler(theArr) {
-        $('#sectionPosty ul a').bind('click', (e)=> {
-            let thePost = theArr['text'].filter(i=> i['name'] == e.target.id)
-            $('#posts ul').html(thePost[0]['content'])
-            console.log(thePost)
-        })
+    displaySectionPosty() {
+        return `<div class="card mx-auto w-75">
+                    <div class="card-header"><h1>Spis Postów</h1></div>
+                    <div class="card-body"></div>
+                </div>`
     }
 }
                 

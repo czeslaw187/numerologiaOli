@@ -3,17 +3,24 @@
     font-weight: bold;
 }
 
-#pageCarousel .card-body, #pageSection .card-body, button, .contactForm, #sectionPosty a, #posts, #pageSection h1 {
-    font-family: 'Aref Ruqaa', serif ;
+#pageCarousel .card-body, 
+#pageSection .card-body, 
+button, 
+.contactForm, 
+#sectionPostyNumerologia a, 
+#posts, 
+#pageSection h1 {
+    font-family: 'Aref Ruqaa', serif;
     color: whitesmoke; 
 }
 
 #mainContent .card-body {
-    font-size: 1.2rem;
+    font-size: 100%;
 }
 
-#pageCarousel .card-header {
+.card-header h1 {
     font-family: 'Aref Ruqaa', serif !important;
+    font-size: 200%;
 }
 
 #pageCarousel, #posts li * {
@@ -31,7 +38,7 @@ a#next.carousel-control-next, a#prev {
 .navbar button {
     color: white;
     font-family: 'Aref Ruqaa', serif;
-    font-size: 1.2rem;
+    font-size: 150%;
 }
 
 #menuList {
@@ -86,6 +93,13 @@ nav {
     font-size: 0.8rem;
 }
 
+@media only screen and (min-width: 320px) {
+    #navContent {
+        position: relative !important;
+        width: 90% !important;
+    }
+}
+
 #navContent li, #navContent button {
     margin: 0.1rem 0;
     padding: 0.1rem 0;
@@ -127,21 +141,28 @@ div.card-body, #pageSection .card {
 
 .price {
     margin: 0.5rem 1.5rem 2rem 0 !important;
+    font-size: 100%;
 }
 
 #numerBody * {
     color: whitesmoke !important;
 }
 
-#sectionPosty a, #posts ul li, #sectionPosty .card-body {
+#sectionPostyNumerologia a, #posts ul li, #sectionPostyNumerologia .card-body {
     background-color:rgb(21, 27, 141, 0) !important;
 }
 
-#sectionPosty a:hover {
+#sectionPostyNumerologia a:hover {
     cursor: pointer;
     background-color: rgb(21, 27, 141, 0.5) !important;
 }
 
-#sectionPosty a:active {
+#sectionPostyNumerologia a:active {
     background-color: rgb(21, 27, 141, 0.8) !important;
+}
+
+.fa-caret-right {
+    position: relative;
+    top:3.2rem;
+    right: 1.4rem;
 }

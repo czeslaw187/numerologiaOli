@@ -2,8 +2,8 @@ export class SectionContact {
 
     displaySectionContact () {
 
-        return `<div class="card w-75 mr-auto ml-0 p-2 contactForm" id="emailForm">                     
-                    <div class="card-header h1">Szybki Kontakt</div>
+        return `<div class="card w-75 mx-auto p-2 contactForm" id="emailForm">                     
+                    <div class="card-header"><h1>Szybki Kontakt</h1></div>
                     <div class="card-body">
                         <p id="contactError"></p>
                         <form class="form-group w-100">

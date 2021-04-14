@@ -6,28 +6,34 @@ export class ServicesUs {
                         <h1>USŁUGI</h1>
                     </div>
                     <div class="card-body">
-                        <ul>
-                            <li>
-                                <div class="container-fluid py-2">                                
-                                    <a type="button" href="php/worldpay/worldpayCreditDetails1.php" class="btn btn-success pull-right">Zamów</a>
-                                    <span class="pull-right price">260 zł</span>
-                                    <h3>Portret numerologiczny</h3>
-                                    <p class="mt-2">( opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia)</p>
-                                    <a type="button" data-toggle="collapse" data-target="#ofertaTarot">więcej...</a>                                                                
-                                    <div class="collapse" id="ofertaTarot">
-                                    Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez datę urodzenia 
-                                    oraz imiona i nazwiska, które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech , 
-                                    charakter, to co wnosi w życie dzień urodzenia. Rozpisuje tez diament życia, 
-                                    który mówi o energii w jakiej będziemy w danych momentach życia, co zaplanowaliśmy sobie na to wcielenie, 
-                                    z czym przyjdzie się nam zmierzyć, czyli jakie wyzwania sobie wybraliśmy schodząc do tej reinkarnacji. 
-                                    Dowiesz się też nad czym powinieneś pracować, co jest Twoja mocna stroną, jaki jest cel twojego życia, 
-                                    jak wyglądają Twoje relacje z rodzicami. Przede wszystkim dowiesz się, że wszystko to zostało zapisan
-                                    e a Twoim zadaniem jest to świadomie realizować, świadomość pozwala na lepsze spojrzenie na swoje życie i siebie. 
-                                    Masz pytania? Pisz. 
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
+                                <div class="row py-2">                                               
+                                    <div class="col-8">
+                                        <h3>Portret numerologiczny</h3>
+                                        <p class="m-1">( opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia)</p>
+                                        <a type="button" data-toggle="collapse" data-target="#ofertaTarot">więcej...</a>                                                                
+                                        <div class="collapse" id="ofertaTarot">
+                                        Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez datę urodzenia 
+                                        oraz imiona i nazwiska, które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech , 
+                                        charakter, to co wnosi w życie dzień urodzenia. Rozpisuje tez diament życia, 
+                                        który mówi o energii w jakiej będziemy w danych momentach życia, co zaplanowaliśmy sobie na to wcielenie, 
+                                        z czym przyjdzie się nam zmierzyć, czyli jakie wyzwania sobie wybraliśmy schodząc do tej reinkarnacji. 
+                                        Dowiesz się też nad czym powinieneś pracować, co jest Twoja mocna stroną, jaki jest cel twojego życia, 
+                                        jak wyglądają Twoje relacje z rodzicami. Przede wszystkim dowiesz się, że wszystko to zostało zapisan
+                                        e a Twoim zadaniem jest to świadomie realizować, świadomość pozwala na lepsze spojrzenie na swoje życie i siebie. 
+                                        Masz pytania? Pisz. 
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="price d-inline-flex">260zł</p>
+                                    </div>
+                                    <div class="col-2 d-inline-flex justify-content-start align-items-start">
+                                        <a type="button" href="php/worldpay/worldpayCreditDetails1.php" class="btn btn-success">Zamów</a>
                                     </div>                                    
                                 </div>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails2.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">125 zł</span>
@@ -35,7 +41,7 @@ export class ServicesUs {
                                     <p class="mt-2">( Energetyka imienia może wiele zmienić, warto dobrać je tak aby było ono korzystne)</p>                        
                                 </div>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails3.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">180 zł</span>
@@ -48,7 +54,7 @@ export class ServicesUs {
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails4.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">100 zł</span>
@@ -66,7 +72,7 @@ export class ServicesUs {
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 <div class="container-fluid py-2">                                
                                     <a type="button" href="php/worldpay/worldpayCreditDetails5.php" class="btn btn-success pull-right">Zamów</a>
                                     <span class="pull-right price">65 zł</span>
