@@ -132,7 +132,6 @@ div.card-body, #pageSection .card {
 
 #usluga li{
     background-color: rgb(21, 27, 141, 0); 
-    color: white;
 }
 
 #usluga a {
@@ -143,7 +142,6 @@ div.card-body, #pageSection .card {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     width: 3rem;
-    color: white;
 }
 
 .noBar::-webkit-scrollbar {
