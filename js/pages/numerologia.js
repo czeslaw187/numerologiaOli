@@ -3,8 +3,7 @@ export class Numerologia {
         this.postArr = postArr
     }
     
-    displayPostyNumerologia() {
-        
+    displayPostyNumerologia() {        
         $.ajax({
             url: 'php/getNumber.php',
             type: 'post',
@@ -48,8 +47,7 @@ export class Numerologia {
         })
     }
 
-    displayCyfra() {        
-        
+    displayCyfra() {
         return `<div class="card w-75 mx-auto" id="obliczDrogeZycia">
                     <div class="card-header"><h1>Oblicz Drogę Życia</h1></div>
                     <div class="card-body text-center">
@@ -65,7 +63,6 @@ export class Numerologia {
     }
 
     cyfraHandler() {
-
         $('#obliczDrogeZycia input#day').mask('99-99-9999')
 
         $('#obliczDroge').bind('click', (e)=>{
