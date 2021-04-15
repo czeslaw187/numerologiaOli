@@ -43,7 +43,6 @@ export class Numerologia {
     numerologiaHandler(theArr) {
         $('#sectionPostyNumerologia ul a').bind('click', (e)=> {
             let article = theArr['text'].filter(i=> i['name'] == e.target.id)
-            console.log(article[0])
             $('#numerologiaBody .card-body').html(article[0]['content'])
             $('#numerologiaBody .card-header h1').html('Posty')
         })
@@ -113,7 +112,6 @@ export class Numerologia {
                 data: {cyfra: cyfra},
                 dataType: 'json',
                 success: result=> {
-                    console.log(result)
                     $('#numerBody').append(`${result['text']}`)
                 }
                 })
