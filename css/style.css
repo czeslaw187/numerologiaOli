@@ -23,11 +23,13 @@ button,
     font-size: 200%;
 }
 
-#pageCarousel, #posts li * {
+#pageCarousel, 
+#posts li *,
+#emailForm {
     background-color: rgba(255, 255, 255, 0);
 }
 
-#usluga button:visited {
+#usluga a:visited {
     color: whitesmoke !important;
 }
 
@@ -62,7 +64,8 @@ a#next.carousel-control-next, a#prev {
 
 @media only screen and (max-width: 990px) {
     #menuList {
-        background-color: black !important;
+        /*background-color: rgb(21, 27, 141) !important;*/
+        background-image: linear-gradient(to bottom right, black, navy);
     }
 }
 
@@ -93,10 +96,10 @@ nav {
     font-size: 0.8rem;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 556px) {
     #navContent {
         position: relative !important;
-        width: 90% !important;
+        width: 90vw !important;
     }
 }
 
@@ -124,8 +127,13 @@ div.card-body, #pageSection .card {
     background-clip: unset !important;
 }
 
-#usluga li {
-    background-color: rgb(21, 27, 141, 0) 
+#usluga li{
+    background-color: rgb(21, 27, 141, 0); 
+    color: white;
+}
+
+#usluga a {
+    color: white;
 }
 
 #usluga input {

@@ -1,22 +1,19 @@
 // class import
 import { Header } from './header.js' // navigation bar
-import { Carousel } from './carousel.js' // render pages as carousel
+import { Carousel } from './carousel.js' // render pages in a carousel
 
 import { AboutMe } from './pages/aboutMe.js'
 import { ServicesUs } from './pages/services.js'
 import { ContactUs } from './pages/contact.js'
 import { Numerologia } from './pages/numerologia.js'
-
-import { SectionContact } from './section/sectionContact.js'
-import { SectionOpinions } from './section/opinions.js'
-import { Karta } from './section/kartaDnia.js'
-import { Cyfra } from './section/cyfraDnia.js'
 import { Posty } from './pages/posty.js'
 
-import { StronaKarta } from './pages/subpages/stronaKarta.js'
 
 // declaring headerNav instance
 const head = new Header('Numerologia')
+
+// declare carousel instance
+const carousel = new Carousel() 
 
 // declaring pages instances
 const aboutMe = new AboutMe()
@@ -33,18 +30,6 @@ let contentArray = [
     contact.displayContactUs(),
 ] 
 
-// declaring section content
-const sectionContact = new SectionContact()
-const sectionOpinions = new SectionOpinions() 
-const kartaDnia = new Karta()
-const cyfraDnia = new Cyfra()
-
-// declaring subpages calsses
-const stronaKarta = new StronaKarta()
-
-// declare carousel instance
-const carousel = new Carousel() 
-
 // adds active-page class to nav element on slide
 const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
@@ -57,31 +42,32 @@ const highlightNav = () => {
             // render section content on slide
             if (pageTitle == `O Mnie`) {
                 $('#mainContent .active').html(aboutMe.displayAboutMe())
-                $('#pageSection').html(kartaDnia.displayKarta()).append(kartaDnia.displayFbAndYou())
+                $('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou())
                 // handle subpage of about me 
                 $('#randomCard').on('click', ()=> {
-                    let image = kartaDnia.randomNumber
-                    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image['path'][0], image['text']))
+                    let image = aboutMe.randomNumber
+                    $('#stronaOmnie').html(aboutMe.displayStronaKarta(image['path'][0], image['text']))
                 })
             } else if (pageTitle == 'Numerologia') {   
                 $('#mainContent .active').html(numerologia.displayPostyNumerologia())             
-                $('#pageSection').html(cyfraDnia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr)).append(kartaDnia.displayFbAndYou())
+                $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr)).append(aboutMe.displayFbAndYou())
                 numerologia.numerologiaHandler(numerologia.postArr)  
-                cyfraDnia.cyfraHandler()         
+                numerologia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
                 $('#mainContent .active').html(posty.displayPosty())
-                $('#pageSection').html(posty.displaySectionPosty()).append(kartaDnia.displayFbAndYou())
+                $('#pageSection').html(posty.displaySectionPosty()).append(aboutMe.displayFbAndYou())
             } else if (pageTitle == 'Usługi') {
-                $('#pageSection').html(sectionOpinions.displaySectionOpinions())
-                sectionOpinions.insertOpinionhandler()
+                $('#pageSection').html(services.displaySectionOpinions())
+                services.insertOpinionhandler()
             } else if (pageTitle == 'Kontakt') {
-                $('#pageSection').html(sectionContact.displaySectionContact())
-                sectionContact.handleContactForm()
+                $('#pageSection').html(contact.displaySectionContact()).append(aboutMe.displayFbAndYou())
+                contact.handleContactForm()
             }
         }
     })
 }
 
+// render top section content
 $('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitle">
                         <h2 class="mt-4">Rozwoj Duchowy</h2>
                         <h2 class="mt-4">Numerologia</h2> 
@@ -91,16 +77,18 @@ $('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitl
 $('#navContent').html(head.displayHeader()) // render navbar
 $('#mainContent').html(carousel.displayCarousel(contentArray)) // render main content
 $('#about').addClass('active-page') // set active-page on page load
-$('#pageSection').html(kartaDnia.displayKarta()).append(kartaDnia.displayFbAndYou())
+$('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou()) // set section content on page load
 $('title').html(`Numerologia - Glowna`) // set page title to 'Home'
 
 highlightNav() // invoke add active-page class
 
+// call main page section handler on page load
 $('#randomCard').on('click', ()=> {
-    let image = kartaDnia.randomNumber
+    let image = aboutMe.randomNumber
     console.log(image)
-    $('#stronaOmnie').html(stronaKarta.displayStronaKarta(image['path'][0], image['text']))
+    $('#stronaOmnie').html(aboutMe.displayStronaKarta(image['path'][0], image['text']))
 })
+
 // navigation buttons logics
 $('#menuList li button').on('click', (e)=> {    
     $('#menuList li button').removeClass('active-page');
@@ -110,8 +98,7 @@ $('#menuList li button').on('click', (e)=> {
             $('#pageCarousel').carousel(0)       
             break;
         case 'Numerologia':
-            $('#pageCarousel').carousel(1)
-            cyfraDnia.cyfraHandler()   
+            $('#pageCarousel').carousel(1)  
             break;
         case 'Posty':
             $('#pageCarousel').carousel(2)
@@ -128,8 +115,6 @@ $('#menuList li button').on('click', (e)=> {
 })
 
 
-
-// handle opinions
 
 
 
