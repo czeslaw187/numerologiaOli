@@ -1,6 +1,10 @@
 #topSection {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
+    color: white;
+    /*background-image: url('../images/bg/bg-topsection.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;*/
 }
 
 #pageCarousel .card-body, 
@@ -8,10 +12,9 @@
 button, 
 .contactForm, 
 #sectionPostyNumerologia a, 
-#posts, 
-#pageSection h1 {
+#posts {
     font-family: 'Aref Ruqaa', serif;
-    color: whitesmoke; 
+    color: rgb(29, 29, 29); 
 }
 
 #mainContent .card-body {
@@ -64,13 +67,12 @@ a#next.carousel-control-next, a#prev {
 
 @media only screen and (max-width: 990px) {
     #menuList {
-        /*background-color: rgb(21, 27, 141) !important;*/
         background-image: linear-gradient(to bottom right, black, navy);
     }
 }
 
 body {
-    background-image: url('../images/spacebg.jpg');
+    background-image: url('../images/bg/paint_liquid_fluid_art_175172_3840x2400.jpg');
     background-size: cover;
     width: 100vh;
     height: 100vw;
@@ -89,7 +91,7 @@ nav {
 }
 
 #navContent {
-    background-image: linear-gradient(to bottom right, black, navy);
+    background-image: linear-gradient(to bottom right, rgb(241, 120, 241), aqua);
     border-radius: 10px;
     width: 70vw;
     margin-left: 5vw;
@@ -114,27 +116,27 @@ nav {
 }
 
 div.card-header {
+    color: white;
     text-align: center !important;
-    color: white !important;
+    /*color: white !important;*/
     background-image: linear-gradient(to right bottom, black,blue);
     border-radius: 20px 20px 0 0 !important;
 }
 
 div.card-body, #pageSection .card {
     min-height: 100%;
-    background-color: rgb(21, 27, 141, 0.5) !important;
+    background-color: rgb(21, 27, 141, 0.1) !important;
     background-size: cover !important;
     background-clip: unset !important;
 }
 
-#usluga li {
+#usluga li{
     background-color: rgb(21, 27, 141, 0); 
     color: white;
 }
 
-#usluga a.ml-3 {
+#usluga a {
     color: white;
-    background-color: rgb(21, 27, 141, 0.1);
 }
 
 #usluga input {

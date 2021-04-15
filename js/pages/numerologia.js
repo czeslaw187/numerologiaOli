@@ -3,7 +3,8 @@ export class Numerologia {
         this.postArr = postArr
     }
     
-    displayPostyNumerologia() {        
+    displayPostyNumerologia() {
+        
         $.ajax({
             url: 'php/getNumber.php',
             type: 'post',
@@ -42,12 +43,14 @@ export class Numerologia {
     numerologiaHandler(theArr) {
         $('#sectionPostyNumerologia ul a').bind('click', (e)=> {
             let article = theArr['text'].filter(i=> i['name'] == e.target.id)
+            console.log(article[0])
             $('#numerologiaBody .card-body').html(article[0]['content'])
-            $('#numerologiaBody .card-header h1').html('Posty')
+            $('#numerologiaBody .card-header h1').html(article[0]['name'])
         })
     }
 
-    displayCyfra() {
+    displayCyfra() {        
+        
         return `<div class="card w-75 mx-auto" id="obliczDrogeZycia">
                     <div class="card-header"><h1>Oblicz Drogę Życia</h1></div>
                     <div class="card-body text-center">
@@ -56,13 +59,14 @@ export class Numerologia {
                             <p class="text-center">dd-mm-yyyy</p>
                             <p id="dateError" class="text-danger"></p>
                             <input type="text" id="day" name="day" class="form-control w-75 text-center mx-auto" maxlength="10" required/>
-                            <a href="#numerBody" type="button" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</a>                             
+                            <button role="submit" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</button>                             
                         </form>
                     </div>
                 </div>`
     }
 
     cyfraHandler() {
+
         $('#obliczDrogeZycia input#day').mask('99-99-9999')
 
         $('#obliczDroge').bind('click', (e)=>{
@@ -83,22 +87,7 @@ export class Numerologia {
                 
                 total1.forEach(i=> {
                     cyfra += parseInt(i)
-                }) 
-
-                cyfra = cyfra.toString()
-                let cyfra2 = 0
-                if (cyfra.length == 2) {                    
-                    cyfra = cyfra.toString()
-                    cyfra = cyfra.split('')
-                    cyfra.forEach(i=> {
-                        cyfra2 += parseInt(i)
-                    })
-                    cyfra = cyfra2
-                }
-
-                if (!cyfra2) {
-                    cyfra = parseInt(cyfra)
-                }
+                })       
 
                 $('#numerologiaBody').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
                                             <div class="card-body" id="numerBody"></div>`)
@@ -109,6 +98,7 @@ export class Numerologia {
                 data: {cyfra: cyfra},
                 dataType: 'json',
                 success: result=> {
+                    console.log(result)
                     $('#numerBody').append(`${result['text']}`)
                 }
                 })

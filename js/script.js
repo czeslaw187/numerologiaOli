@@ -50,12 +50,12 @@ const highlightNav = () => {
                 })
             } else if (pageTitle == 'Numerologia') {   
                 $('#mainContent .active').html(numerologia.displayPostyNumerologia())             
-                $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr)).append(aboutMe.displayFbAndYou())
+                $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr))
                 numerologia.numerologiaHandler(numerologia.postArr)  
                 numerologia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
                 $('#mainContent .active').html(posty.displayPosty())
-                $('#pageSection').html(posty.displaySectionPosty()).append(aboutMe.displayFbAndYou())
+                $('#pageSection').html(posty.displaySectionPosty())
             } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(services.displaySectionOpinions())
                 services.insertOpinionhandler()
@@ -69,10 +69,10 @@ const highlightNav = () => {
 
 // render top section content
 $('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitle">
-                        <h2 class="mt-4">Rozwoj Duchowy</h2>
-                        <h2 class="mt-4">Numerologia</h2> 
-                        <h2 class="mt-4">Ezoteryka</h2> 
-                        <h2 class="mt-4">Tarot</h2> 
+                            <h2 class="mt-4">Rozwoj Duchowy</h2>
+                            <h2 class="mt-4">Numerologia</h2> 
+                            <h2 class="mt-4">Ezoteryka</h2> 
+                            <h2 class="mt-4">Tarot</h2>                            
                        </div>`)
 $('#navContent').html(head.displayHeader()) // render navbar
 $('#mainContent').html(carousel.displayCarousel(contentArray)) // render main content

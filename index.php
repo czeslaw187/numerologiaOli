@@ -18,7 +18,7 @@
 </head>
 <body style="width: 100vw; height: 100vw" class="noBar">
     <div id="main" class="mx-0">
-        <div class="container-fluid" style="height: 35vh;" id="topSection"></div>
+        <div class="container-fluid px-0" style="height: 35vh;" id="topSection"></div>
         <div class="container-fluid my-5 p-0" id="navContent"></div>
         <div class="row my-5 p-0">
             <div class="col-12 col-md-8 p-0">

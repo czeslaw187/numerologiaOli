@@ -33,7 +33,7 @@ export class ContactUs {
                             <input type="text" name="email" id="email" class="form-control"/>
                             <label for="message">Wiadomość</label>
                             <textarea name="msg" id="msg" class="form-control" rows="5"></textarea>
-                            <button type="button" id="submitMsg" class="btn btn-outline-primary mt-2">Wyslij</button>
+                            <button type="button" id="submitMsg" class="btn btn-outline-secondary mt-2">Wyslij</button>
                         </form>
                     </div>   
                 </div>`
