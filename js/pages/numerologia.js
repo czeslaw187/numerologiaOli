@@ -59,7 +59,7 @@ export class Numerologia {
                             <p class="text-center">dd-mm-yyyy</p>
                             <p id="dateError" class="text-danger"></p>
                             <input type="text" id="day" name="day" class="form-control w-75 text-center mx-auto" maxlength="10" required/>
-                            <a href="#numerBody" type="submit" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</a>                             
+                            <a href="#numerBody" type="button" id="obliczDroge" class="btn btn-outline-primary mt-3">Oblicz</a>                             
                         </form>
                     </div>
                 </div>`
