@@ -127,13 +127,14 @@ div.card-body, #pageSection .card {
     background-clip: unset !important;
 }
 
-#usluga li #usluga a{
+#usluga li {
     background-color: rgb(21, 27, 141, 0); 
     color: white;
 }
 
 #usluga a {
     color: white;
+    background-color: rgb(21, 27, 141, 0.5);
 }
 
 #usluga input {
