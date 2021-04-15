@@ -132,7 +132,7 @@ div.card-body, #pageSection .card {
     color: white;
 }
 
-#usluga a {
+#usluga a.ml-3 {
     color: white;
     background-color: rgb(21, 27, 141, 0.5);
 }
