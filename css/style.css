@@ -127,7 +127,7 @@ div.card-body, #pageSection .card {
     background-clip: unset !important;
 }
 
-#usluga li{
+#usluga li #usluga a{
     background-color: rgb(21, 27, 141, 0); 
     color: white;
 }
