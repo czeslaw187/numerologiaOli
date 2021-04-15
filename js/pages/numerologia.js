@@ -87,7 +87,17 @@ export class Numerologia {
                 
                 total1.forEach(i=> {
                     cyfra += parseInt(i)
-                })       
+                }) 
+
+                if (cyfra.length == 2) {
+                    let cyfra2 = 0
+                    cyfra = cyfra.toString()
+                    cyfra = cyfra.split('')
+                    cyfra.forEach(i=> {
+                        cyfra2 += parseInt(i)
+                    })
+                    cyfra = cyfra2
+                }
 
                 $('#numerologiaBody').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
                                             <div class="card-body" id="numerBody"></div>`)
