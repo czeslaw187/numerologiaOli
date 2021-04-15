@@ -89,6 +89,8 @@ export class Numerologia {
                     cyfra += parseInt(i)
                 }) 
 
+                cyfra = cyfra.toString()
+
                 if (cyfra.length == 2) {
                     let cyfra2 = 0
                     cyfra = cyfra.toString()
@@ -97,6 +99,10 @@ export class Numerologia {
                         cyfra2 += parseInt(i)
                     })
                     cyfra = cyfra2
+                }
+
+                if (!cyfra2) {
+                    cyfra = parseInt(cyfra)
                 }
 
                 $('#numerologiaBody').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
