@@ -90,9 +90,8 @@ export class Numerologia {
                 }) 
 
                 cyfra = cyfra.toString()
-
-                if (cyfra.length == 2) {
-                    let cyfra2 = 0
+                let cyfra2 = 0
+                if (cyfra.length == 2) {                    
                     cyfra = cyfra.toString()
                     cyfra = cyfra.split('')
                     cyfra.forEach(i=> {
