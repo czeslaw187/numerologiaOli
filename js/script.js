@@ -30,8 +30,8 @@ let contentArray = [
     contact.displayContactUs(),
 ] 
 
-// adds active-page class to nav element on slide
-const highlightNav = () => {
+// handle navigation events on-slide
+export const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
         if ($('.carousel-item').hasClass('active')) {
             let navIndex = $('#pageCarousel .active').index()
@@ -49,13 +49,14 @@ const highlightNav = () => {
                     $('#stronaOmnie').html(aboutMe.displayStronaKarta(image['path'][0], image['text']))
                 })
             } else if (pageTitle == 'Numerologia') {   
-                $('#mainContent .active').html(numerologia.displayPostyNumerologia())             
+                $('#mainContent .active').html(numerologia.displayPostyNumerologia())         
                 $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr))
                 numerologia.numerologiaHandler(numerologia.postArr)  
                 numerologia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
                 $('#mainContent .active').html(posty.displayPosty())
-                $('#pageSection').html(posty.displaySectionPosty())
+                $('#pageSection').html('')
+                posty.postyHandler(posty.article)          
             } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(services.displaySectionOpinions())
                 services.insertOpinionhandler()
@@ -85,7 +86,6 @@ highlightNav() // invoke add active-page class
 // call main page section handler on page load
 $('#randomCard').on('click', ()=> {
     let image = aboutMe.randomNumber
-    console.log(image)
     $('#stronaOmnie').html(aboutMe.displayStronaKarta(image['path'][0], image['text']))
 })
 

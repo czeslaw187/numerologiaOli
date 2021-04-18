@@ -2,9 +2,6 @@
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     color: white;
-    /*background-image: url('../images/bg/bg-topsection.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;*/
 }
 
 #pageCarousel .card-body, 
@@ -12,7 +9,9 @@
 button, 
 .contactForm, 
 #sectionPostyNumerologia a, 
-#posts {
+#posts,
+.card-body *,
+#postyNext h3 {
     font-family: 'Aref Ruqaa', serif;
     color: rgb(29, 29, 29); 
 }
@@ -67,7 +66,7 @@ a#next.carousel-control-next, a#prev {
 
 @media only screen and (max-width: 990px) {
     #menuList {
-        background-image: linear-gradient(to bottom right, black, navy);
+        background-image: linear-gradient(to bottom right, rgb(255, 0, 230), rgb(24, 213, 213), rgb(255, 0, 230));
     }
 }
 
@@ -91,7 +90,7 @@ nav {
 }
 
 #navContent {
-    background-image: linear-gradient(to bottom right, rgb(241, 120, 241), aqua);
+    background-image: linear-gradient(to bottom right, rgb(255, 0, 230), rgb(24, 213, 213), rgb(255, 0, 230));
     border-radius: 10px;
     width: 70vw;
     margin-left: 5vw;
@@ -132,6 +131,7 @@ div.card-body, #pageSection .card {
 
 #usluga li{
     background-color: rgb(21, 27, 141, 0); 
+    color: white;
 }
 
 #usluga a {
@@ -142,6 +142,7 @@ div.card-body, #pageSection .card {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     width: 3rem;
+    color: white;
 }
 
 .noBar::-webkit-scrollbar {
@@ -157,11 +158,15 @@ div.card-body, #pageSection .card {
     color: whitesmoke !important;
 }
 
-#sectionPostyNumerologia a, #posts ul li, #sectionPostyNumerologia .card-body {
+#sectionPostyNumerologia a, 
+#posts ul li, 
+#sectionPostyNumerologia .card-body, 
+#postySection a {
     background-color:rgb(21, 27, 141, 0) !important;
 }
 
-#sectionPostyNumerologia a:hover {
+#sectionPostyNumerologia a:hover, 
+#postySection a:hover {
     cursor: pointer;
     background-color: rgb(21, 27, 141, 0.5) !important;
 }
@@ -175,3 +180,21 @@ div.card-body, #pageSection .card {
     top:3.2rem;
     right: 1.4rem;
 }
+
+#postyNext .col-12:hover  {
+    transition: all .4s ease-in-out;
+}
+
+#postyNext .col-12:hover {
+    transform: scale(1.1);
+}
+
+#postyNext button {
+    position: relative !important;
+    height: 15em !important;
+    width: 90% !important;
+}
+
+
+
+         

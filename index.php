@@ -24,7 +24,7 @@
             <div class="col-12 col-md-8 p-0">
                 <div class="container-fluid" id="mainContent"></div>        
             </div>
-            <div class="col-12 col-md-4 p-0 mt-5 mt-md-0">
+            <div class="col-12 col-md-4 p-0 mt-5 mt-md-0" id="col-2">
                 <div class="container-fluid" id="pageSection"></div>
             </div>
         </div>
