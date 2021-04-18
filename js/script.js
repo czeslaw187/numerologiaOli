@@ -43,6 +43,8 @@ export const highlightNav = () => {
             if (pageTitle == `O Mnie`) {
                 $('#mainContent .active').html(aboutMe.displayAboutMe())
                 $('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou())
+                $('#col-2').show()
+                $('#mainContent, .carousel-item .active').css({'width': ''})
                 // handle subpage of about me 
                 $('#randomCard').on('click', ()=> {
                     let image = aboutMe.randomNumber
@@ -51,6 +53,8 @@ export const highlightNav = () => {
             } else if (pageTitle == 'Numerologia') {   
                 $('#mainContent .active').html(numerologia.displayPostyNumerologia())         
                 $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr))
+                $('#col-2').show()
+                $('#mainContent, .carousel-item .active').css({'width': ''})
                 numerologia.numerologiaHandler(numerologia.postArr)  
                 numerologia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
@@ -59,9 +63,13 @@ export const highlightNav = () => {
                 posty.postyHandler(posty.article)          
             } else if (pageTitle == 'Usługi') {
                 $('#pageSection').html(services.displaySectionOpinions())
+                $('#col-2').show()
+                $('#mainContent, .carousel-item .active').css({'width': ''})
                 services.insertOpinionhandler()
             } else if (pageTitle == 'Kontakt') {
                 $('#pageSection').html(contact.displaySectionContact()).append(aboutMe.displayFbAndYou())
+                $('#col-2').show()
+                $('#mainContent, .carousel-item .active').css({'width': ''})
                 contact.handleContactForm()
             }
         }

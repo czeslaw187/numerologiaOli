@@ -13,9 +13,8 @@ export class Posty {
                 this.article = result                        
             }
         })
-        $('#col-2').hide()
-        $('#mainContent, .carousel-item .active').css({'width': '100vw'})
-        return `<div class="row d-flex flex-row w-100 pl-3 mt-5 ml-auto" id="postyNext" style="width: 100vw !important">
+        
+        return `<div class="row d-flex flex-row w-100 pl-3 mt-5 ml-auto" id="postyNext">
                     <div class="col-12 col-md-6 p-5 text-center">
                         <button class="btn border-dark rounded" id="zdrowie"></button>
                         <h3 class="mb-5">ZDROWIE</h3>
@@ -36,7 +35,8 @@ export class Posty {
     }
 
     postyHandler(theArr) {        
-
+        $('#col-2').hide()
+        $('#mainContent, .carousel-item .active').css({'width': '100vw'})
         $('#postyNext button').bind('click', (e)=> {    
                     $('#col-2').show()
                     $('#mainContent, .carousel-item .active').css({'width': ''})
