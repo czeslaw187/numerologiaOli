@@ -13,7 +13,7 @@ class ReadDoxFile {
     }
 
     public function getFileContent() {
-        $file = glob($this->filePath, GLOB_NOSORT);
+        $file = glob($this->filePath);
         $output = [];    
         $doc = new Docx_reader();
         for ($i = 0; $i < count($file); $i++) {
