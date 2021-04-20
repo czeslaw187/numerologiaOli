@@ -1,3 +1,22 @@
+$(document).ready(function(){
+    
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 500) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+    
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+    
+});
+
 // class import
 import { Header } from './header.js' // navigation bar
 import { Carousel } from './carousel.js' // render pages in a carousel
@@ -7,7 +26,6 @@ import { ServicesUs } from './pages/services.js'
 import { ContactUs } from './pages/contact.js'
 import { Numerologia } from './pages/numerologia.js'
 import { Posty } from './pages/posty.js'
-
 
 // declaring headerNav instance
 const head = new Header('Numerologia')
@@ -30,6 +48,8 @@ let contentArray = [
     contact.displayContactUs(),
 ] 
 
+
+
 // handle navigation events on-slide
 export const highlightNav = () => {
     $('#pageCarousel').on('slid.bs.carousel', ()=> {
@@ -41,8 +61,10 @@ export const highlightNav = () => {
             $('title').html(`Numerologia - ${pageTitle}`) // dynamic page title     
             // render section content on slide
             if (pageTitle == `O Mnie`) {
-                $('#mainContent .active').html(aboutMe.displayAboutMe())
-                $('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou())
+                $('#col-1').prop('class', 'col-12 col-md-8 p-0')
+                $('#col-2').prop('class', 'col-12 col-md-4 p-0')
+                $('#mainContent .active').html('').html(aboutMe.displayAboutMe())
+                $('#pageSection').html('').html(aboutMe.displayKarta())
                 $('#col-2').show()
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 // handle subpage of about me 
@@ -51,25 +73,33 @@ export const highlightNav = () => {
                     $('#stronaOmnie').html(aboutMe.displayStronaKarta(image['path'][0], image['text']))
                 })
             } else if (pageTitle == 'Numerologia') {   
+                $('#col-1').prop('class', 'col-12 col-md-8 p-0')
+                $('#col-2').prop('class', 'col-12 col-md-4 p-0')
                 $('#mainContent .active').html(numerologia.displayPostyNumerologia())         
-                $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr))
+                $('#pageSection').html(numerologia.displayCyfra()).append(numerologia.displaySectionNumerologia(numerologia.postArr))  
                 $('#col-2').show()
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 numerologia.numerologiaHandler(numerologia.postArr)  
                 numerologia.cyfraHandler()         
             } else if (pageTitle == 'Posty') {
+                $('#col-1').prop('class', 'col-12 col-md-8 p-0')
+                $('#col-2').prop('class', 'col-12 col-md-4 p-0')
                 $('#mainContent .active').html(posty.displayPosty())
                 $('#pageSection').html('')
                 posty.postyHandler(posty.article)          
             } else if (pageTitle == 'Usługi') {
+                $('#col-1').prop('class', 'col-12 col-md-8 p-0')
+                $('#col-2').prop('class', 'col-12 col-md-4 p-0')
                 $('#pageSection').html(services.displaySectionOpinions())
                 $('#col-2').show()
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 services.insertOpinionhandler()
             } else if (pageTitle == 'Kontakt') {
-                $('#pageSection').html(contact.displaySectionContact()).append(aboutMe.displayFbAndYou())
                 $('#col-2').show()
+                $('#col-1, #col-2').prop('class', 'col-12 col-md-6')
                 $('#mainContent, .carousel-item .active').css({'width': ''})
+                $('#mainContent .active').html(contact.displayContactUs())
+                $('#pageSection').html(contact.displaySectionContact())                
                 contact.handleContactForm()
             }
         }
@@ -86,7 +116,7 @@ $('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitl
 $('#navContent').html(head.displayHeader()) // render navbar
 $('#mainContent').html(carousel.displayCarousel(contentArray)) // render main content
 $('#about').addClass('active-page') // set active-page on page load
-$('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou()) // set section content on page load
+$('#pageSection').html(aboutMe.displayKarta())// set section content on page load
 $('title').html(`Numerologia - Glowna`) // set page title to 'Home'
 
 highlightNav() // invoke add active-page class

@@ -9,9 +9,9 @@ export class AboutMe {
                         <h1>O Mnie</h1>
                     </div>
                     <div class="card-body p-0 p-md-2">
-                        <div class="row">
+                        <div class="row fadein">
                             <div class="col-4">
-                                <img src="images/ola.jpg" class="w-100 mr-3" />
+                                <img src="images/ola.jpg" class="w-100 mr-3" style="transform: scale(0.8)" />
                             </div>
                             <div class="col-8">
                                 <h4 class="card-title mb-2">Kim jestem?</h4>

@@ -4,6 +4,7 @@ export class Posty {
     }
     
     displayPosty() {
+
         $.ajax({
             url: './php/getNumber.php',
             type: 'POST',
@@ -14,43 +15,44 @@ export class Posty {
             }
         })
         
-        return `<div class="row d-flex flex-row w-100 pl-3 mt-5 ml-auto" id="postyNext">
-                    <div class="col-12 col-md-6 p-5 text-center">
-                        <button class="btn border-dark rounded" id="zdrowie"></button>
+        return `<div class="row d-flex flex-row w-100 p-5 m-auto" id="postyNext">
+                    <div class="col-12 col-md-6 p-0 text-center">
+                        <button class="btn p-0 ml-md-5"><img src="images/posty/zdrowie.jpg" class="w-75 h-100 rounded" id="zdrowieZak"/></button>
                         <h3 class="mb-5">ZDROWIE</h3>
                     </div>
-                    <div class="col-12 col-md-6 p-5 text-center">
-                        <button class="btn border-dark rounded" id="kamienie"></button>
+                    <div class="col-12 col-md-6 p-0 text-center">
+                        <button class="btn p-0 mr-md-5"><img src="images/posty/kamienie i kryształy.jpg" class="w-75 h-100 rounded" id="kamienieZak"/></button>
                         <h3 class="mb-5">KAMIENIE I KRYSZTAŁY</h3>
                     </div>
-                    <div class="col-12 col-md-6 p-5 text-center">
-                        <button class="btn border-dark rounded" id="rozwoj"></button>
+                    <div class="col-12 col-md-6 p-0 text-center">
+                        <button class="btn p-0 ml-md-5"><img src="images/posty/rozwój duchowy.jpg" class="w-75 h-100 rounded" id="rozwojZak"/></button>
                         <h3 class="mb-5">ROZWÓJ DUCHOWY</h3>
                     </div>
-                    <div class="col-12 col-md-6 p-5 text-center">
-                        <button class="btn border-dark rounded" id="anioly"></button>
+                    <div class="col-12 col-md-6 p-0 text-center">
+                        <button class="btn p-0 mr-md-5"><img src="images/posty/anioły i karty.jpg" class="w-75 h-100 rounded" id="aniolyZak"/></button>
                         <h3 class="mb-5">ANIOŁY I KARTY</h3>
                     </div>
                 </div>`
     }
 
-    postyHandler(theArr) {        
+    postyHandler(theArr) {   
+
         $('#col-2').hide()
         $('#mainContent, .carousel-item .active').css({'width': '100vw'})
-        $('#postyNext button').bind('click', (e)=> {    
+        $('#postyNext img').bind('click', (e)=> {    
                     $('#col-2').show()
                     $('#mainContent, .carousel-item .active').css({'width': ''})
                     let listBtn = []      
-                    let obj = {}            
+                    let obj = {}       
                     for (let i in theArr) {
                         if (i == e.target.id) {
                             obj = theArr[i]['text']
                         }
                     }
+                    console.log(obj)
                     obj.forEach(art=> {
-                        listBtn += `<a class="list-group-item list-group-item-action" id="${art['name']}">${art['name']}</a>`
+                        listBtn += `<a href="#mainContent" class="list-group-item list-group-item-action" id="${art['name']}"><span class="fa fa-caret-right"></span>${art['name']}</a>`
                     })
-                    console.log(obj[0]['content'])
                     $('#mainContent .active').html(`<div class="card h-100 mx-2">
                                                         <a class="btn pl-1" id="bckBtn"><i class="fa fa-caret-left ml-1"></i>wstecz</a>
                                                         <div class="card-body">

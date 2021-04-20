@@ -19,14 +19,17 @@
 <body style="width: 100vw; height: 100vw" class="noBar">
     <div id="main" class="mx-0">
         <div class="container-fluid px-0" style="height: 35vh;" id="topSection"></div>
-        <div class="container-fluid my-5 p-0" id="navContent"></div>
+        <div class="container-fluid my-5 p-0 fadein" id="navContent"></div>
         <div class="row my-5 p-0">
-            <div class="col-12 col-md-8 p-0">
+            <div class="col-12 col-md-8 p-0" id="col-1">
                 <div class="container-fluid" id="mainContent"></div>        
             </div>
             <div class="col-12 col-md-4 p-0 mt-5 mt-md-0" id="col-2">
                 <div class="container-fluid" id="pageSection"></div>
             </div>
+        </div>
+        <div class="container-fluid p-0 fixed-bottom d-flex justify-content-center" id="footer">
+            <a href="#" class="scrollToTop m-auto"><i class="fa fa-angle-double-up fa-3x"></i></a>
         </div>
     </div>
     <script src="./vendors/jquery/jquery-3.5.1.js"></script>

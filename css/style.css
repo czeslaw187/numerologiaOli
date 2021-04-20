@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #topSection {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
@@ -7,17 +11,19 @@
 #pageCarousel .card-body, 
 #pageSection .card-body, 
 button, 
-.contactForm, 
+#emailForm, 
 #sectionPostyNumerologia a, 
 #posts,
 .card-body *,
 #postyNext h3 {
     font-family: 'Aref Ruqaa', serif;
     color: rgb(29, 29, 29); 
+    animation: fadein 2s ease-in-out;
 }
 
 #mainContent .card-body {
     font-size: 100%;
+    animation: fadein 2s ease-in-out;
 }
 
 .card-header h1 {
@@ -31,10 +37,6 @@ button,
     background-color: rgba(255, 255, 255, 0);
 }
 
-#usluga a:visited {
-    color: whitesmoke !important;
-}
-
 a#next.carousel-control-next, a#prev {
     display: none;
 }
@@ -42,7 +44,6 @@ a#next.carousel-control-next, a#prev {
 .navbar button {
     color: white;
     font-family: 'Aref Ruqaa', serif;
-    font-size: 150%;
 }
 
 #menuList {
@@ -90,11 +91,14 @@ nav {
 }
 
 #navContent {
-    background-image: linear-gradient(to bottom right, rgb(255, 0, 230), rgb(24, 213, 213), rgb(255, 0, 230));
+    /*
+    background-image: linear-gradient(to bottom right, rgb(255, 0, 230), rgb(24, 213, 213), rgb(255, 0, 230));*/
+    background-image: url('../images/bg/card-header1.jpg');
+    background-size: cover;
     border-radius: 10px;
     width: 70vw;
     margin-left: 5vw;
-    font-size: 0.8rem;
+    font-size: 70%;
 }
 
 @media only screen and (max-width: 556px) {
@@ -111,13 +115,12 @@ nav {
 
 #pageSection > *, div.card {
     border-radius: 20px 20px 0 0 !important;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);    
 }
 
 div.card-header {
     color: white;
     text-align: center !important;
-    /*color: white !important;*/
     background-image: linear-gradient(to right bottom, black,blue);
     border-radius: 20px 20px 0 0 !important;
 }
@@ -131,10 +134,6 @@ div.card-body, #pageSection .card {
 
 #usluga li{
     background-color: rgb(21, 27, 141, 0); 
-    color: white;
-}
-
-#usluga a {
     color: white;
 }
 
@@ -154,15 +153,17 @@ div.card-body, #pageSection .card {
     font-size: 100%;
 }
 
-#numerBody * {
-    color: whitesmoke !important;
-}
-
 #sectionPostyNumerologia a, 
 #posts ul li, 
 #sectionPostyNumerologia .card-body, 
 #postySection a {
     background-color:rgb(21, 27, 141, 0) !important;
+}
+
+#postySection a span {
+    position: relative;
+    top: 0.1rem;
+    right: 1rem;
 }
 
 #sectionPostyNumerologia a:hover, 
@@ -194,7 +195,50 @@ div.card-body, #pageSection .card {
     height: 15em !important;
     width: 90% !important;
 }
+/*
+#zdrowieZak {
+    background-image: url('../images/posty/zdrowie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
 
+#kamienieZak {
+    background-image: url('../images/posty/kamienie i kryształy.jpg');
+    background-size: cover;
+}
 
+#rozwojZak {
+    background-image: url('../images/posty/rozwój duchowy.jpg');
+    background-size: cover;
+}
 
-         
+#aniolyZak {
+    background-image: url('../images/posty/anioły i karty.jpg');
+    background-size: cover;
+}
+*/
+
+.fadein {
+    animation: fadein 0.05s ease-out ;
+  }
+  @keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+  }
+
+  .scrollToTop{
+    width:3%; 
+    height:3%;
+    padding:10px; 
+    text-align:center; 
+    text-decoration: none;
+    bottom:7%;
+    left: 50%;
+    display:none;
+    color: black;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+    transform: scale(1.3);
+}        

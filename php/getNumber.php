@@ -43,13 +43,13 @@ if (isset($_POST['id']) && $_POST['id'] == 'post') {
     echo json_encode($output);
 } elseif (isset($_POST['id']) && $_POST['id'] == 'posty2') {
     $extractor = new ReadDoxFile("../images/posty/zdrowie/*.docx", 4);
-    $output['zdrowie'] = $extractor->getFileContent();
+    $output['zdrowieZak'] = $extractor->getFileContent();
     $extractor = new ReadDoxFile("../images/posty/rozwoj/*.docx", 4);
-    $output['rozwoj'] = $extractor->getFileContent();
+    $output['rozwojZak'] = $extractor->getFileContent();
     $extractor = new ReadDoxFile("../images/posty/kamienie/*.docx", 4);
-    $output['kamienie'] = $extractor->getFileContent();
+    $output['kamienieZak'] = $extractor->getFileContent();
     $extractor = new ReadDoxFile("../images/posty/anioly/*.docx", 4);
-    $output['anioly'] = $extractor->getFileContent();
+    $output['aniolyZak'] = $extractor->getFileContent();
     
     echo json_encode($output);
 } else {

@@ -15,7 +15,7 @@ export class Numerologia {
                 this.postArr = result
             }
         })
-        return `<div class="card mx-2" id="numerologiaBody">
+        return `<div class="card mx-2 " id="numerologiaBody">
                     <div class="card-header">
                         <h1>Posty</h1>
                     </div>
@@ -68,7 +68,6 @@ export class Numerologia {
     cyfraHandler() {
 
         $('#obliczDrogeZycia input#day').mask('99-99-9999')
-
         $('#obliczDroge').bind('click', (e)=>{
             e.preventDefault()
             $('#dateError').html('')
@@ -87,7 +86,17 @@ export class Numerologia {
                 
                 total1.forEach(i=> {
                     cyfra += parseInt(i)
-                })       
+                })    
+                
+                if (cyfra.toString().length == 2) {
+                    cyfra = cyfra.toString()
+                    cyfra = cyfra.split('')
+                    total1 = 0
+                    cyfra.forEach(i=> {
+                        total1 += parseInt(i)
+                    })
+                    cyfra = total1
+                }
 
                 $('#numerologiaBody').html(`<div class="card-header"><h1>${cyfra}</h1></div>  
                                             <div class="card-body" id="numerBody"></div>`)
