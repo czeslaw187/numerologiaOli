@@ -20,7 +20,7 @@ export class ServicesUs {
                                 </div>
                                 <p class="m-0">( opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia)</p>
                                 <div class="row">                                    
-                                    <a type="button" data-toggle="collapse" data-target="#ofertaTarot" class="ml-auto mr-5">więcej...</a> 
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaTarot" class="ml-auto mr-10">więcej...</a> 
                                     <div class="collapse" id="ofertaTarot">
                                     Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez datę urodzenia 
                                     oraz imiona i nazwiska, które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech , 
