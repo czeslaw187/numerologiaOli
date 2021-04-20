@@ -11,19 +11,19 @@ html {
 #pageCarousel .card-body, 
 #pageSection .card-body, 
 button, 
-#emailForm, 
+#emailForm.card-body, 
 #sectionPostyNumerologia a, 
 #posts,
 .card-body *,
 #postyNext h3 {
     font-family: 'Aref Ruqaa', serif;
     color: rgb(29, 29, 29); 
-    animation: fadein 2s ease-in-out;
+    animation: fadein 1s ease-in-out;
 }
 
 #mainContent .card-body {
     font-size: 100%;
-    animation: fadein 2s ease-in-out;
+    animation: fadein 1s ease-in-out;
 }
 
 .card-header h1 {
@@ -195,32 +195,9 @@ div.card-body, #pageSection .card {
     height: 15em !important;
     width: 90% !important;
 }
-/*
-#zdrowieZak {
-    background-image: url('../images/posty/zdrowie.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-}
-
-#kamienieZak {
-    background-image: url('../images/posty/kamienie i kryształy.jpg');
-    background-size: cover;
-}
-
-#rozwojZak {
-    background-image: url('../images/posty/rozwój duchowy.jpg');
-    background-size: cover;
-}
-
-#aniolyZak {
-    background-image: url('../images/posty/anioły i karty.jpg');
-    background-size: cover;
-}
-*/
 
 .fadein {
-    animation: fadein 0.05s ease-out ;
+    animation: fadein 1s ease-out ;
   }
   @keyframes fadein {
     from { opacity: 0}
