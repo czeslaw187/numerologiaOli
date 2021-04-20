@@ -3,11 +3,8 @@ export class ContactUs {
     displayContactUs() {
         
         return `<div class="card mx-auto w-100">
-                    <div class="card-header">
-                        <h1>Kontakt</h1>
-                    </div>
                     <div class="card-body">
-                        
+                    <h1 class="h1">Kontakt</h1>
                     </div>
                 </div>`
     }
