@@ -154,7 +154,7 @@ export class ServicesUs extends CardDetails {
     }
 
     servicesHandler() {
-        $('#buyOptions').on('click', (e)=> {
+        $('#buyOptions button').on('click', (e)=> {
             let cena = $('#buyOptions').find(e.target).parent().find('span').html()
             this.cardDetailsForm(e.target.id, cena)
             this.servicesBck()
