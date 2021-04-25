@@ -12,12 +12,13 @@ export class Numerologia {
             data: {id: 'post'},
             success: result=> {
                 $('#numerologiaBody .card-body').append(`${result['text'][0]['content']}`)
+                $('#numerologiaBody .card-header h1').html(`${result['text'][0]['name']}`)
                 this.postArr = result
             }
         })
         return `<div class="card mx-2 " id="numerologiaBody">
                     <div class="card-header">
-                        <h1>Posty</h1>
+                        <h1></h1>
                     </div>
                     <div class="card-body">
                     
@@ -43,7 +44,6 @@ export class Numerologia {
     numerologiaHandler(theArr) {
         $('#sectionPostyNumerologia ul a').bind('click', (e)=> {
             let article = theArr['text'].filter(i=> i['name'] == e.target.id)
-            console.log(article[0])
             $('#numerologiaBody .card-body').html(article[0]['content'])
             $('#numerologiaBody .card-header h1').html(article[0]['name'])
         })
@@ -107,7 +107,6 @@ export class Numerologia {
                 data: {cyfra: cyfra},
                 dataType: 'json',
                 success: result=> {
-                    console.log(result)
                     $('#numerBody').append(`${result['text']}`)
                 }
                 })

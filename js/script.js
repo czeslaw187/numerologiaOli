@@ -11,7 +11,7 @@ $(document).ready(function(){
     
     //Click event to scroll to top
     $('.scrollToTop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
+        $('html, body').animate({scrollTop : 0},500);
         return false;
     });
     
@@ -64,7 +64,7 @@ export const highlightNav = () => {
                 $('#col-1').prop('class', 'col-12 col-md-8 p-0')
                 $('#col-2').prop('class', 'col-12 col-md-4 p-0')
                 $('#mainContent .active').html('').html(aboutMe.displayAboutMe())
-                $('#pageSection').html('').html(aboutMe.displayKarta())
+                $('#pageSection').html('').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou())
                 $('#col-2').show()
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 // handle subpage of about me 
@@ -90,10 +90,12 @@ export const highlightNav = () => {
             } else if (pageTitle == 'Usługi') {
                 $('#col-1').prop('class', 'col-12 col-md-8 p-0')
                 $('#col-2').prop('class', 'col-12 col-md-4 p-0')
+                $('#mainContent .active').html(services.displayServices)
                 $('#pageSection').html(services.displaySectionOpinions())
                 $('#col-2').show()
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 services.insertOpinionhandler()
+                services.servicesHandler()
             } else if (pageTitle == 'Kontakt') {
                 $('#col-2').show()
                 $('#col-1, #col-2').prop('class', 'col-12 col-md-6')
@@ -107,16 +109,10 @@ export const highlightNav = () => {
 }
 
 // render top section content
-$('#topSection').html(`<div class="container-fluid text-left" id="topSectionTitle">
-                            <h2 class="mt-4">Rozwoj Duchowy</h2>
-                            <h2 class="mt-4">Numerologia</h2> 
-                            <h2 class="mt-4">Ezoteryka</h2> 
-                            <h2 class="mt-4">Tarot</h2>                            
-                       </div>`)
 $('#navContent').html(head.displayHeader()) // render navbar
 $('#mainContent').html(carousel.displayCarousel(contentArray)) // render main content
 $('#about').addClass('active-page') // set active-page on page load
-$('#pageSection').html(aboutMe.displayKarta())// set section content on page load
+$('#pageSection').html(aboutMe.displayKarta()).append(aboutMe.displayFbAndYou())// set section content on page load
 $('title').html(`Numerologia - Glowna`) // set page title to 'Home'
 
 highlightNav() // invoke add active-page class

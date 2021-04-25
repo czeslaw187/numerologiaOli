@@ -49,7 +49,6 @@ export class Posty {
                             obj = theArr[i]['text']
                         }
                     }
-                    console.log(obj)
                     obj.forEach(art=> {
                         listBtn += `<a href="#mainContent" class="list-group-item list-group-item-action" id="${art['name']}"><span class="fa fa-caret-right"></span>${art['name']}</a>`
                     })

@@ -52,6 +52,11 @@ if (isset($_POST['id']) && $_POST['id'] == 'post') {
     $output['aniolyZak'] = $extractor->getFileContent();
     
     echo json_encode($output);
+} elseif (isset($_POST['id']) && $_POST['id'] == 'omnie') {
+    $extractor = new ReadDoxFile("../images/Kim jestem.docx", 2);
+    $output = $extractor->getFileContent();
+    
+    echo json_encode($output);
 } else {
     $ranNumber = $_POST['cyfra'];
 

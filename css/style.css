@@ -8,10 +8,22 @@ html {
     color: white;
 }
 
+#topSection img {
+    width: 15%;
+    height: 30%;
+    position: absolute;
+}
+
+@media only screen and (max-width: 767px) {
+    #topSection img {
+        width: 40%;
+    }
+}
+
 #pageCarousel .card-body, 
 #pageSection .card-body, 
 button, 
-#emailForm.card-body, 
+#emailForm, 
 #sectionPostyNumerologia a, 
 #posts,
 .card-body *,
@@ -72,7 +84,7 @@ a#next.carousel-control-next, a#prev {
 }
 
 body {
-    background-image: url('../images/bg/paint_liquid_fluid_art_175172_3840x2400.jpg');
+    background-image: url('../images/tłoo/fav1.jpg');
     background-size: cover;
     width: 100vh;
     height: 100vw;
@@ -91,8 +103,6 @@ nav {
 }
 
 #navContent {
-    /*
-    background-image: linear-gradient(to bottom right, rgb(255, 0, 230), rgb(24, 213, 213), rgb(255, 0, 230));*/
     background-image: url('../images/bg/card-header1.jpg');
     background-size: cover;
     border-radius: 10px;
@@ -101,7 +111,7 @@ nav {
     font-size: 70%;
 }
 
-@media only screen and (max-width: 556px) {
+@media only screen and (max-width: 827px) {
     #navContent {
         position: relative !important;
         width: 90vw !important;
@@ -113,23 +123,27 @@ nav {
     padding: 0.1rem 0;
 }
 
-#pageSection > *, div.card {
+#pageSection .card {
     border-radius: 20px 20px 0 0 !important;
-    background-color: rgba(255, 255, 255, 0);    
+    background-color: rgba(0,0,0,0.1) !important;    
 }
 
 div.card-header {
     color: white;
     text-align: center !important;
-    background-image: linear-gradient(to right bottom, black,blue);
+    background-image: linear-gradient(to right bottom, rgb(0, 0, 0), blue 20%, aqua 80%);
     border-radius: 20px 20px 0 0 !important;
 }
 
-div.card-body, #pageSection .card {
+#pageSection > *, div.card {
     min-height: 100%;
-    background-color: rgb(21, 27, 141, 0.1) !important;
+    background-color: rgba(57, 62, 140, 0) !important;
     background-size: cover !important;
     background-clip: unset !important;
+}
+
+#mainContent .card {
+    border: none;
 }
 
 #usluga li{
@@ -155,6 +169,7 @@ div.card-body, #pageSection .card {
 
 #sectionPostyNumerologia a, 
 #posts ul li, 
+#contactPage ul li,
 #sectionPostyNumerologia .card-body, 
 #postySection a {
     background-color:rgb(21, 27, 141, 0) !important;
@@ -178,12 +193,8 @@ div.card-body, #pageSection .card {
 
 .fa-caret-right {
     position: relative;
-    top:3.2rem;
+    top:2.5rem;
     right: 1.4rem;
-}
-
-#postyNext .col-12:hover  {
-    transition: all .4s ease-in-out;
 }
 
 #postyNext .col-12:hover {
@@ -197,16 +208,16 @@ div.card-body, #pageSection .card {
 }
 
 .fadein {
-    animation: fadein 1s ease-out ;
+    animation: fadein 0.5s ease-out ;
   }
   @keyframes fadein {
-    from { opacity: 0}
-    to   { opacity: 1}
+    from { transform: scale(0)}
+    to   { transform: scale(1)}
   }
 
   .scrollToTop{
-    width:3%; 
-    height:3%;
+    width:7%; 
+    height:7%;
     padding:10px; 
     text-align:center; 
     text-decoration: none;

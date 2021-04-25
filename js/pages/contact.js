@@ -2,9 +2,21 @@ export class ContactUs {
     
     displayContactUs() {
         
-        return `<div class="card mx-auto w-100">
+        return `<div class="card mx-auto w-100" id="contactPage">
                     <div class="card-body">
-                    <h1 class="h1">Kontakt</h1>
+                        <h1 class="text-center">Aleksandra Wojciechowska</h1>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h4>Mail: numerologia.aleksandra@gmail.com</h4>
+                            </li>
+                            <li class="list-group-item">
+                                <h4>Facebook: 
+                                    <a href="https://www.facebook.com/Numerologia-klucz-do-%C5%9Bwiadomego-%C5%BCycia-102955935259397">
+                                        https://www.facebook.com/Numerologia-klucz-do-%C5%9Bwiadomego-%C5%BCycia-102955935259397
+                                    </a>
+                                </h4>
+                            </li>
+                        </ul>
                     </div>
                 </div>`
     }
@@ -31,12 +43,13 @@ export class ContactUs {
     }
 
     handleContactForm() {
-        $('#contactError').html(``)
+        
         $('#submitMsg').bind('click', ()=> {
             let name = $('#emailForm input#name').val()
             let email = $('#emailForm input#email').val()
             let subject = $('#emailForm input#subject').val()
             let msg = $('#emailForm textarea#msg').val()
+            $('#contactError').html(``)
             $.ajax({
                 url: 'php/contactForm/contactForm.php',
                 type: 'POST',
@@ -48,10 +61,12 @@ export class ContactUs {
                     msg: msg
                 },
                 success:result=> {
-                    if (result['message'] = 'ok') {
+                    if (result['message'] == 'ok') {
                         $('#contactError').html(`Message sent`).css('color', 'green');
-                    } else {
+                    } else if (result['message'] == 'error') {
                         $('#contactError').html(`Error sending message`).css('color', 'red');
+                    } else {
+                        $('#contactError').html(result['message']).css('color', 'red')
                     }
                 }
             })
