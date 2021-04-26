@@ -50,9 +50,8 @@ button,
     animation: fadein 1s ease-in-out;
 }
 
-.card-header h1 {
+.card-header h3 {
     font-family: 'Aref Ruqaa', serif !important;
-    font-size: 200%;
 }
 
 #pageCarousel, 

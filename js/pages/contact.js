@@ -24,7 +24,7 @@ export class ContactUs {
     displaySectionContact () {
 
         return `<div class="card h-100 w-100 mx-auto contactForm" id="emailForm">                     
-                    <div class="card-header"><h1>Szybki Kontakt</h1></div>
+                    <div class="card-header"><h3>Szybki Kontakt</h3></div>
                     <div class="card-body">
                         <p id="contactError"></p>
                         <form class="form-group w-100">

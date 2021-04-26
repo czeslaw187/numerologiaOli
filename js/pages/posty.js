@@ -62,7 +62,7 @@ export class Posty {
                     this.handleBckBtn(this.article)                               
 
                     $('#pageSection').html(`<div class="card w-75 mx-auto" id="postySection">
-                                        <div class="card-header">Spis postów</div>
+                                        <div class="card-header"><h3>Spis postów</h3></div>
                                         <div class="card-body">
                                             <ul class="list-group list-group-flush" id="btnList">
                                                 ${listBtn}

@@ -12,13 +12,13 @@ export class Numerologia {
             data: {id: 'post'},
             success: result=> {
                 $('#numerologiaBody .card-body').append(`${result['text'][0]['content']}`)
-                $('#numerologiaBody .card-header h1').html(`${result['text'][0]['name']}`)
+                $('#numerologiaBody .card-header h3').html(`${result['text'][0]['name']}`)
                 this.postArr = result
             }
         })
         return `<div class="card mx-2 " id="numerologiaBody">
                     <div class="card-header">
-                        <h1></h1>
+                        <h3></h3>
                     </div>
                     <div class="card-body">
                     
@@ -32,7 +32,7 @@ export class Numerologia {
             listOfPosts += `<a href='#' id="${post['name']}" class="list-group-item sizeHover">${post['name']}</a>`
         })
         return `<div class="card w-75 mx-auto mt-5" id="sectionPostyNumerologia">
-                    <div class="card-header"><h1>Najciekawsze Posty</h1></div>
+                    <div class="card-header"><h3>Najciekawsze Posty</h3></div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             ${listOfPosts}
@@ -52,7 +52,7 @@ export class Numerologia {
     displayCyfra() {        
         
         return `<div class="card w-75 mx-auto" id="obliczDrogeZycia">
-                    <div class="card-header"><h1>Oblicz Drogę Życia</h1></div>
+                    <div class="card-header"><h3>Oblicz Drogę Życia</h3></div>
                     <div class="card-body text-center">
                         <form id="formDrogi text-center">
                             <label for="day">Wpisz Date Urodzenia</label>

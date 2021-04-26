@@ -52,7 +52,7 @@ export class AboutMe {
         })
 
         return `<div class="card mx-auto mr-md-auto w-75">
-                    <div class="card-header"><h1 class="w-100">Karta Dnia</h1></div>                        
+                    <div class="card-header"><h3 class="w-100">Karta Dnia</h3></div>                        
                     <div class="card-body text-center">
                         <a href='#stronaOmnie' id="randomCard" style="background-color: rgb(21, 27, 141, 0); border: none"><img src="images/przeslanie.jpg" class="w-75" /></a>
                     </div>
@@ -62,13 +62,13 @@ export class AboutMe {
     displayFbAndYou() {
 
         return `<div class="card w-75 mt-5 mx-auto">
-                    <div class="card-header text-center"><h2 class="w-100">FACEBOOK</h2></div>
+                    <div class="card-header text-center"><h3 class="w-100">FACEBOOK</h3></div>
                     <div class="card-body text-center">
 
                     </div>
                 </div>
                 <div class="card w-75 mt-5 mx-auto">
-                    <div class="card-header text-center"><h2 class="w-100">YOUTUBE</h2></div>
+                    <div class="card-header text-center"><h3 class="w-100">YOUTUBE</h3></div>
                     <div class="card-body text-center">
 
                     </div>
