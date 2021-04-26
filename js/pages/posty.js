@@ -53,7 +53,7 @@ export class Posty {
                         listBtn += `<a href="#mainContent" class="list-group-item list-group-item" id="${art['name']}"><span class="fa fa-caret-right"></span>${art['name']}</a>`
                     })
                     $('#mainContent .active').html(`<div class="card h-100 mx-2">
-                                                        <a class="btn pl-1" id="bckBtn"><i class="fa fa-caret-left ml-1"></i>wstecz</a>
+                                                        <a class="btn pl-1" id="bckBtn"><i class="fa fa-arrow-left mr-1"></i>wstecz</a>
                                                         <div class="card-body">
                                                             <h2 class="h2 text-center">${obj[0]['name']}</h2>
                                                             ${obj[0]['content']}

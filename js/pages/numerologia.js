@@ -45,7 +45,7 @@ export class Numerologia {
         $('#sectionPostyNumerologia ul a').bind('click', (e)=> {
             let article = theArr['text'].filter(i=> i['name'] == e.target.id)
             $('#numerologiaBody .card-body').html(article[0]['content'])
-            $('#numerologiaBody .card-header h1').html(article[0]['name'])
+            $('#numerologiaBody .card-header h3').html(article[0]['name'])
         })
     }
 

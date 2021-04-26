@@ -9,7 +9,7 @@ if (!$name) {
     $output['message'] = 'wpisz imię';
     echo json_encode($output);
     exit();
-} else if (!$message) {
+} else if (!$opinion) {
     $output['message'] = 'wpisz wiadomość';
     echo json_encode($output);
     exit();

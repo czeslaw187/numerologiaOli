@@ -184,16 +184,16 @@ export class ServicesUs extends CardDetails {
         })
                 
         return `<div class="card mt-5 mt-md-0 w-100 mx-auto noBar" style="height: 30rem; overflow: auto;">
-                    <div class="card-header"><h1>Zostaw Opinię</h1></div>
+                    <div class="card-header"><h3>Zostaw Opinię</h3></div>
                     <span id="opinionErr"></span>
-                    <div class="card-body p-1" id="opinionsContainer">
+                    <div class="card-body p-1 noBar" id="opinionsContainer" style="overflow: auto;">
                                                 
                     </div>
                     <form class="form-group contactForm mx-3">
                         <label for="opinionName">Imię</label>
                         <input type="text" name="opinionName" id="opinionName" class="form-control" required />
                         <label for="yourOpinion">Twoja Opinia</label>
-                        <textarea name="yourOpinion" id="yourOpinion" class="form-control" columns="10" rows="7" placeholder="Enter your message..." required></textarea>
+                        <textarea name="yourOpinion" id="yourOpinion" class="form-control" columns="10" rows="4" placeholder="Enter your message..." required></textarea>
                         <button role="button" class="btn btn-secondary mt-2" id="submitOpinion">Wyślij</button>
                     </form>
                 </div>`
