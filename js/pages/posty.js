@@ -50,7 +50,7 @@ export class Posty {
                         }
                     }
                     obj.forEach(art=> {
-                        listBtn += `<a href="#mainContent" class="list-group-item list-group-item-action" id="${art['name']}"><span class="fa fa-caret-right"></span>${art['name']}</a>`
+                        listBtn += `<a href="#mainContent" class="list-group-item list-group-item" id="${art['name']}"><span class="fa fa-caret-right"></span>${art['name']}</a>`
                     })
                     $('#mainContent .active').html(`<div class="card h-100 mx-2">
                                                         <a class="btn pl-1" id="bckBtn"><i class="fa fa-caret-left ml-1"></i>wstecz</a>

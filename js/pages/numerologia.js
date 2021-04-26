@@ -29,7 +29,7 @@ export class Numerologia {
     displaySectionNumerologia(theArr) {
         let listOfPosts = []
         theArr['text'].forEach(post=> {
-            listOfPosts += `<a href='#' id="${post['name']}" class="list-group-item list-group-item-action">${post['name']}</a>`
+            listOfPosts += `<a href='#' id="${post['name']}" class="list-group-item sizeHover">${post['name']}</a>`
         })
         return `<div class="card w-75 mx-auto mt-5" id="sectionPostyNumerologia">
                     <div class="card-header"><h1>Najciekawsze Posty</h1></div>
