@@ -9,7 +9,7 @@ export class AboutMe {
                     <div class="card-body p-0 p-md-2">
                         <div class="row fadein">
                             <div class="col-4">
-                                <img src="images/ola.jpg" class="w-100 mr-3" style="transform: scale(0.8)" />
+                                <img src="images/ola3.jpg" class="w-100 mr-3" />
                             </div>
                             <div class="col-8">
                                 <h4 class="card-title mb-4">Kim jestem?</h4>
@@ -63,16 +63,19 @@ export class AboutMe {
 
         return `<div class="card w-75 mt-5 mx-auto">
                     <div class="card-header text-center"><h3 class="w-100">FACEBOOK</h3></div>
-                    <div class="card-body text-center">
-
+                    <div class="card-body text-center w-100 px-0 pb-0 h-auto">
+                   
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNumerologia-klucz-do-%25C5%259Bwiadomego-%25C5%25BCycia-102955935259397&tabs=false&width=260&height=280&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="258" height="auto" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
-                <div class="card w-75 mt-5 mx-auto">
+                <div class="card w-75 my-5 mx-auto">
                     <div class="card-header text-center"><h3 class="w-100">YOUTUBE</h3></div>
-                    <div class="card-body text-center">
-
+                    <div class="card-body d-flex justify-content-center">
+                    <div class="g-ytsubscribe mx-1" data-channelid="UCxoaxZutoZpVjZvPq71s79g" data-layout="full" data-theme="default" data-count="default" style="width:257px"></div>
                     </div>
                 </div>`
+
+               
     }
 
     displayStronaKarta(image, text) {
@@ -92,3 +95,4 @@ export class AboutMe {
                 </div>`
     }
 }
+

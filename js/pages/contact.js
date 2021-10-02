@@ -2,22 +2,14 @@ export class ContactUs {
     
     displayContactUs() {
         
-        return `<div class="card mx-auto w-100" id="contactPage">
-                    <div class="card-body">
-                        <h1 class="text-center">Aleksandra Wojciechowska</h1>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <h4>Mail: numerologia.aleksandra@gmail.com</h4>
-                            </li>
-                            <li class="list-group-item">
-                                <h4>Facebook: 
-                                    <a href="https://www.facebook.com/Numerologia-klucz-do-%C5%9Bwiadomego-%C5%BCycia-102955935259397">
-                                        https://www.facebook.com/Numerologia-klucz-do-%C5%9Bwiadomego-%C5%BCycia-102955935259397
-                                    </a>
-                                </h4>
-                            </li>
-                        </ul>
+        return `<div class="card mx-auto ml-md-5 w-00" id="contactPage">
+                    <div class="card-body w-100 p-0 text-left">
+                        <h4>Aleksandra Wojciechowska</h4>
+                        <h4 class="mt-5">Mail: numerologia.aleksandra@gmail.com</h4>                     
                     </div>
+                </div>
+                <div class="container-fluid px-0 text-center mt-5">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNumerologia-klucz-do-%25C5%259Bwiadomego-%25C5%25BCycia-102955935259397&tabs=false&width=260&height=280&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="auto" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>`
     }
 
@@ -36,7 +28,7 @@ export class ContactUs {
                             <input type="text" name="email" id="email" class="form-control"/>
                             <label for="message">Wiadomość</label>
                             <textarea name="msg" id="msg" class="form-control" rows="5"></textarea>
-                            <button type="button" id="submitMsg" class="btn btn-primary mt-2">Wyslij</button>
+                            <button type="button" id="submitMsg" class="btn btn-primary mt-2 pull-right">Wyslij</button>
                         </form>
                     </div>   
                 </div>`

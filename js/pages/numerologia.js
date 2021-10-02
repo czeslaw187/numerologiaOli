@@ -16,7 +16,7 @@ export class Numerologia {
                 this.postArr = result
             }
         })
-        return `<div class="card mx-2 " id="numerologiaBody">
+        return `<div class="card ml-md-5 mr-md-2 ml-5 mr-2 " id="numerologiaBody">
                     <div class="card-header">
                         <h3></h3>
                     </div>

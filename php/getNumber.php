@@ -34,22 +34,38 @@ class ReadDoxFile {
 
         return $output;
     }
+
+    public function getOtherWay() {
+        $file = glob($this->filePath);
+        $output = [];
+        for ($i = 0; $i < count($file); $i++) {            
+            $getPostName = explode('/', $file[$i]);
+            $getPostName = explode('.', $getPostName[$this->position]);
+            $getPostName = $getPostName[0];
+            $output['text'][] = array(
+                'name' => $getPostName,
+                'content' => $file[$i]
+            );
+        }
+        return $output;
+    }
 };
 
 if (isset($_POST['id']) && $_POST['id'] == 'post') {
     $extractor = new ReadDoxFile("../images/postyNumerologia/*.docx", 3);
+
     $output = $extractor->getFileContent();
     
     echo json_encode($output);
 } elseif (isset($_POST['id']) && $_POST['id'] == 'posty2') {
     $extractor = new ReadDoxFile("../images/posty/zdrowie/*.docx", 4);
-    $output['zdrowieZak'] = $extractor->getFileContent();
+    $output['zdrowieZak'] = $extractor->getOtherWayt();
     $extractor = new ReadDoxFile("../images/posty/rozwoj/*.docx", 4);
-    $output['rozwojZak'] = $extractor->getFileContent();
+    $output['rozwojZak'] = $extractor->getOtherWay();
     $extractor = new ReadDoxFile("../images/posty/kamienie/*.docx", 4);
-    $output['kamienieZak'] = $extractor->getFileContent();
+    $output['kamienieZak'] = $extractor->getOtherWay();
     $extractor = new ReadDoxFile("../images/posty/anioly/*.docx", 4);
-    $output['aniolyZak'] = $extractor->getFileContent();
+    $output['aniolyZak'] = $extractor->getOtherWay();
     
     echo json_encode($output);
 } elseif (isset($_POST['id']) && $_POST['id'] == 'omnie') {
@@ -75,4 +91,9 @@ if (isset($_POST['id']) && $_POST['id'] == 'post') {
     echo json_encode($output);
 }
 
+/*
+$extractor = new ReadDoxFile("../images/posty/kamienie/*.docx", 4);
+    $output['kamienieZak'] = $extractor->getOtherWay();
+    echo $output;
+*/
 ?>

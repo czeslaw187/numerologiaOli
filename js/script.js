@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     
     //Check to see if the window is top if not then display button
@@ -25,7 +26,7 @@ import { AboutMe } from './pages/aboutMe.js'
 import { ServicesUs } from './pages/services.js'
 import { ContactUs } from './pages/contact.js'
 import { Numerologia } from './pages/numerologia.js'
-import { Posty } from './pages/posty.js'
+/*import { Posty } from './pages/posty.js'*/
 
 // declaring headerNav instance
 const head = new Header('Numerologia')
@@ -38,12 +39,12 @@ const aboutMe = new AboutMe()
 const services = new ServicesUs()
 const contact = new ContactUs()
 const numerologia = new Numerologia()
-const posty = new Posty()
+/*const posty = new Posty()*/
 
 let contentArray = [
     aboutMe.displayAboutMe(),
     numerologia.displayPostyNumerologia(), 
-    posty.displayPosty(),
+    /*posty.displayPosty(),*/
     services.displayServices(),
     contact.displayContactUs(),
 ] 
@@ -81,12 +82,6 @@ export const highlightNav = () => {
                 $('#mainContent, .carousel-item .active').css({'width': ''})
                 numerologia.numerologiaHandler(numerologia.postArr)  
                 numerologia.cyfraHandler()         
-            } else if (pageTitle == 'Posty') {
-                $('#col-1').prop('class', 'col-12 col-md-8 p-0')
-                $('#col-2').prop('class', 'col-12 col-md-4 p-0')
-                $('#mainContent .active').html(posty.displayPosty())
-                $('#pageSection').html('')
-                posty.postyHandler(posty.article)          
             } else if (pageTitle == 'Usługi') {
                 $('#col-1').prop('class', 'col-12 col-md-8 p-0')
                 $('#col-2').prop('class', 'col-12 col-md-4 p-0')
@@ -133,15 +128,12 @@ $('#menuList li button').on('click', (e)=> {
             break;
         case 'Numerologia':
             $('#pageCarousel').carousel(1)  
-            break;
-        case 'Posty':
-            $('#pageCarousel').carousel(2)
-            break;    
+            break;        
         case 'Usługi':
-            $('#pageCarousel').carousel(3)
+            $('#pageCarousel').carousel(2)
             break;
         case 'Kontakt':
-            $('#pageCarousel').carousel(4)
+            $('#pageCarousel').carousel(3)
             break;
         default:
             return;

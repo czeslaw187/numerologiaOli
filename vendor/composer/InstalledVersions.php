@@ -51,6 +51,24 @@ private static $installed = array (
       ),
       'reference' => 'c81f18a3efb941d8c4d2e025f6183b5c6d697307',
     ),
+    'laminas/laminas-escaper' => 
+    array (
+      'pretty_version' => '2.7.0',
+      'version' => '2.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
+    ),
+    'laminas/laminas-zendframework-bridge' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
+    ),
     'monolog/monolog' => 
     array (
       'pretty_version' => '1.0.2',
@@ -59,6 +77,76 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b704c49a3051536f67f2d39f13568f74615b9922',
+    ),
+    'nikic/fast-route' => 
+    array (
+      'pretty_version' => 'v1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '181d480e08d9476e61381e04a71b34dc0432e812',
+    ),
+    'phpoffice/phpword' => 
+    array (
+      'pretty_version' => '0.18.1',
+      'version' => '0.18.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '06b90e39a36872c6ee73534e1a073f4b3132fc6a',
+    ),
+    'pimple/pimple' => 
+    array (
+      'pretty_version' => 'v3.4.0',
+      'version' => '3.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '86406047271859ffc13424a048541f4531f53601',
+    ),
+    'psr/container' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
+    ),
+    'psr/http-message' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+    ),
+    'psr/http-message-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
+    'slim/slim' => 
+    array (
+      'pretty_version' => '3.12.3',
+      'version' => '3.12.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1c9318a84ffb890900901136d620b4f03a59da38',
+    ),
+    'stripe/stripe-php' => 
+    array (
+      'pretty_version' => 'v7.80.0',
+      'version' => '7.80.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '566900968407302f88a925ba731c87c05fe98a7a',
     ),
     'swiftmailer/swiftmailer' => 
     array (
@@ -114,6 +202,15 @@ private static $installed = array (
       ),
       'reference' => 'cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9',
     ),
+    'wepay/php-sdk' => 
+    array (
+      'pretty_version' => '0.3.1',
+      'version' => '0.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2a89ceb2954d117d082f869d3bfcb7864e6c2a7d',
+    ),
     'worldpay/worldpay-lib-php' => 
     array (
       'pretty_version' => '2.1.2',
@@ -122,6 +219,13 @@ private static $installed = array (
       array (
       ),
       'reference' => '19995ee5a685b83986ac64e1e44561ea8b1a1c86',
+    ),
+    'zendframework/zend-escaper' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '^2.6.1',
+      ),
     ),
   ),
 );

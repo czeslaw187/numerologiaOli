@@ -10,6 +10,8 @@ class ComposerStaticInit539b50d2bcb2171e8cb77eccac6dfade
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -27,6 +29,23 @@ class ComposerStaticInit539b50d2bcb2171e8cb77eccac6dfade
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
+            'Stripe\\' => 7,
+            'Slim\\' => 5,
+        ),
+        'P' => 
+        array (
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+            'PhpOffice\\PhpWord\\' => 18,
+        ),
+        'L' => 
+        array (
+            'Laminas\\ZendFrameworkBridge\\' => 28,
+            'Laminas\\Escaper\\' => 16,
+        ),
+        'F' => 
+        array (
+            'FastRoute\\' => 10,
         ),
         'E' => 
         array (
@@ -63,6 +82,38 @@ class ComposerStaticInit539b50d2bcb2171e8cb77eccac6dfade
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
         ),
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'Slim\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PhpOffice\\PhpWord\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/phpword/src/PhpWord',
+        ),
+        'Laminas\\ZendFrameworkBridge\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
+        ),
+        'Laminas\\Escaper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -74,6 +125,13 @@ class ComposerStaticInit539b50d2bcb2171e8cb77eccac6dfade
     );
 
     public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
         'M' => 
         array (
             'Monolog' => 
@@ -86,6 +144,11 @@ class ComposerStaticInit539b50d2bcb2171e8cb77eccac6dfade
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'WePay' => __DIR__ . '/..' . '/wepay/php-sdk/wepay.php',
+        'WePayException' => __DIR__ . '/..' . '/wepay/php-sdk/wepay.php',
+        'WePayPermissionException' => __DIR__ . '/..' . '/wepay/php-sdk/wepay.php',
+        'WePayRequestException' => __DIR__ . '/..' . '/wepay/php-sdk/wepay.php',
+        'WePayServerException' => __DIR__ . '/..' . '/wepay/php-sdk/wepay.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

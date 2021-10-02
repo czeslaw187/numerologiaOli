@@ -1,5 +1,6 @@
 <?php 
 
+define('br','<br />');
 class Docx_reader {
 
     private $fileData = false;
@@ -216,6 +217,151 @@ END;
 
     private function getStyles() {
         
+    }
+
+}
+
+/** ----------------------------------------------------------------------------------------------------------------------- */
+
+class WordReader {
+    #extract.php
+    public function pre( $data=false, $header=false, $tag='h1' ){
+        $title = $header ? sprintf('<'.$tag.'>%s</'.$tag.'>',$header) : '';
+        printf('%s<pre>%s</pre>',$title,print_r($data,1)); 
+    }
+    
+    public function getparent( $n, $tag ){
+        while( $n && $n->nodeType==XML_ELEMENT_NODE && $n->tagName!=$tag ){
+            $n=$n->parentNode;
+        }
+        return $n;
+    }
+
+
+    public function process_word_docx( $filename ){
+        $data=[ 'start' => microtime( true ),'names'=>[] ];
+        $paths=[];
+
+        $zip=new ZipArchive;
+
+
+        if( true === $zip->open( $filename ) ) {
+            for( $i=0; $i < $zip->numFiles; $i++ ) {
+                $obj=(object)$zip->statIndex( $i );
+
+                if( $obj->name=='word/document.xml' ){
+
+                    $xml=$zip->getFromIndex( $i );
+
+                    $data['position']=$obj->index;
+                    $data['xml-size']=$obj->size;
+                    $data['created']=$obj->mtime;
+                    $data['compression-method']=$obj->comp_method;
+
+
+
+                    libxml_use_internal_errors( true );
+                    $dom=new DOMDocument('1.0','utf-8');
+                    $dom->validateOnParse=false;
+                    $dom->recover=true;
+                    $dom->strictErrorChecking=false;
+                    $dom->loadXML( strtolower( $xml ) );
+                    libxml_clear_errors();
+
+
+
+                    $xp=new DOMXPath( $dom );
+                    /* none of these namespace uris exist */
+                    $xp->registerNamespace('ve','http://schemas.openxmlformats.org/markup-compatibility/2006');
+                    $xp->registerNamespace('r','http://schemas.openxmlformats.org/officeDocument/2006/relationships');
+                    $xp->registerNamespace('m','http://schemas.openxmlformats.org/officeDocument/2006/math');
+                    $xp->registerNamespace('wp','http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing');
+                    $xp->registerNamespace('w','http://schemas.openxmlformats.org/wordprocessingml/2006/main');
+                    $xp->registerNamespace('pic','http://schemas.openxmlformats.org/drawingml/2006/picture');
+                    $xp->registerNamespace('a','http://schemas.openxmlformats.org/drawingml/2006/main');
+                    /* this/these exist */
+                    $xp->registerNamespace('wne','http://schemas.microsoft.com/office/word/2006/wordml');
+
+
+                    /* find tables */
+                    $col=$xp->query( '//w:tbl//w:tr' );
+                    if( $col->length > 0 ){
+                        foreach( $col as $row => $tr ){
+
+                            /* Count the cells on each row */
+                            $expr='count( w:tc )';
+                            $cellcount=$xp->evaluate( $expr, $tr );
+
+                            if( $cellcount > 0 ){
+                                /* find all the table cells for this row */
+                                $expr='w:tc';
+                                $cells=$xp->query( $expr, $tr );
+
+                                /* Are there any images in this row */
+                                $expr='count(//pic:cnvpr)';
+                                $qty=$xp->evaluate( $expr, $tr );
+
+
+                                /* There are images */
+                                if( $qty > 0 ){
+
+                                    $expr='w:tc//w:drawing//a:graphic//pic:pic//pic:nvpicpr/pic:cnvpr';
+                                    $wpcol=$xp->query( $expr, $tr );
+
+                                    if( $wpcol->length > 0 ){
+                                        foreach( $wpcol as $index=> $node ){
+                                            /* navigate up the DOM tree until we find the table cell tag */
+                                            $oCell = $this->getparent( $node, 'w:tc' );
+
+                                            /* Find the name of the image */
+                                            $name = $node->getAttribute('name');
+                                            $data['names'][]=$name;
+
+                                            /* get the text in the current row */
+                                            $text = ucfirst( $tr->textContent ) ?: ' - EMPTY -';
+
+                                            /* find the cell index for the row */
+                                            foreach( $cells as $index => $cell ){
+                                                if( $cell === $oCell )break;
+                                            }
+
+                                            /* prepare payload */
+                                            if( $wpcol->length==1 ){
+                                                $data['statistics'][ $row ]=array(
+                                                    'text'      =>  $text,
+                                                    'name'      =>  $name,
+                                                    'column'    =>  $index
+                                                );
+                                            } else {
+                                                /* multiple images on this row - multiple images can be within a single cell */
+                                                $data['statistics'][ $row ][ $index ][]=array(
+                                                    'text'      =>  $text,
+                                                    'name'      =>  $name,
+                                                    'column'    =>  $index
+                                                );
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    if( preg_match( '([^\s]+(\.(?i)(jpg|jpeg|png|gif|bmp))$)', $obj->name ) ) {
+                        $paths[ $obj->name ]=base64_encode( $zip->getFromIndex( $i ) );
+                    }
+                }
+            }
+        }
+        /* finalise statistics */
+        $data['count']=$qty;
+        $data['end']=microtime( true );
+        $data['time']=$data['end'] - $data['start'];
+        $data['total-size']=filesize( $filename );
+        $data['paths']=$paths;
+
+        /* return payload */
+        return $data;
     }
 
 }

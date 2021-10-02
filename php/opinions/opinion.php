@@ -7,7 +7,7 @@ $output;
 if ($conn->connect_error) {
     $output['error'] = $conn->connect_error;
     $output['message'] = 'Cannot connect with database';
-    exit;
+    exit();
 }
 
 $query = "SELECT * FROM opinions";
