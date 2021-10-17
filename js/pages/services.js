@@ -215,13 +215,7 @@ export class ServicesUs {
                                 </div>
                             `)*/
                             $('#orderForm').find('.modal-body').html(`
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <h2 class="H2">Zamowienie zostalo przyjete. Wyslalismy kolejny etap realizacji na wskazany email</h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h2 class="H2">Zamowienie zostalo przyjete. Wyslalismy kolejny etap realizacji na wskazany email</h2>
                             `)
                         } else {
                             $('#orderForm').html(`
