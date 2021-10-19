@@ -249,6 +249,7 @@ export class ServicesUs {
             method: 'get',
             dataType: 'json',
             success: result=> {
+                console.log('baza')
                 result.forEach(row=> {
                     $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;" id="useropinion${row['id']}">
                                                         <p class="py-0 my-0 mx-5 mx-md-3">${row['name']}</p>
