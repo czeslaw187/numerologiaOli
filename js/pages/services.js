@@ -15,7 +15,7 @@ export class ServicesUs {
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
                                         <p class="price"><span>260</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
+                                        <button role="button" class="btn btn-success" id="transaction">Zamów</button>
                                     </div>                                   
                                 </div>
                                 <p class="m-0">( Opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia )</p>
@@ -156,7 +156,7 @@ export class ServicesUs {
             $('#orderForm').remove()
             const cena = $('#buyOptions').find(e.target).parent().find('span').html()
             const tytul = $('#buyOptions').find(e.target).parent().parent().find('h4').html()
-            const orderID = $('#buyOptions button').attr('id')
+            const orderID = e.target.id
             console.log(orderID)
             this.servicesBck()
             $('#mainContent').append(`<div id="orderForm" class="modal fade" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
@@ -170,19 +170,23 @@ export class ServicesUs {
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                    <form class="form-group">
-                                                        <label for="name">Imie i Nazwisko</label>
-                                                        <input type="text" class="form-control" id="name" name="name" required/>
-                                                        <label for="email">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email" required/>
-                                                    </form>
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <button class="btn btn-success my-3 ml-auto" id="sendOrder">Zamow</button>
+                                                        <h6 class="text-justify mb-5">Proszę o podanie swojego imienia i nazwiska oraz adresu email, na, który zostaną
+                                                        wysłane szczegółowe dane dotyczące zamówienia, (jaki będzie czas jego realizacji, 
+                                                        dane do przelewu, oraz jakie informacje są potrzebne od zamawiającego, aby wykonać zlecenie). 
+                                                        </h6>
+                                                        <h5 class="orderError" style="color: red"></h5>
+                                                        <form class="form-group">
+                                                            <label for="name">Imie i Nazwisko</label>
+                                                            <input type="text" class="form-control" id="name" name="name" required/>
+                                                            <label for="email">Email</label>
+                                                            <input type="email" class="form-control" id="email" name="email" required/>
+                                                        </form>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <button class="btn btn-success my-3 ml-auto" id="sendOrder">Zamow</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    </div>
-                                                    <div class="modal-footer"></div>
                                                 </div>
                                             </div>
                                         </div>`)        
@@ -201,30 +205,33 @@ export class ServicesUs {
                     },
                     success: function(result) {
                         console.log(result)
+                        $('.orderError').html('')
                         if (result['message'] === 'ok') {
-                            console.log(result['message'])/*
-                            $('#mainContent .active ').append(`
-                                <div id="komunikat" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <h2 class="H2">Wystapil blad podczas przesylania zamowienia</h2><h2 class="H2">Sprobuj ponownie</h2>
-                                            </div>
+                            console.log(result['message'])
+                            $('#orderForm').find('.modal-body').html(`
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2 class="H2 text-justify">Dziękuje za złożenie zamówienia, proszę o sprawdzenie swojego maila. </h2>
                                         </div>
                                     </div>
                                 </div>
-                            `)*/
+                            `)
+                        } else if (result['message'] === 'error') {
                             $('#orderForm').find('.modal-body').html(`
-                                <h2 class="H2">Zamowienie zostalo przyjete. Wyslalismy kolejny etap realizacji na wskazany email</h2>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="H2 text-justify">Wystąpił błąd, proszę o sprawdzenie poprawności maila i złożenie zamówienia jeszcze raz.</h2>
+                                    </div>
+                                </div>
+                            </div>
                             `)
                         } else {
-                            $('#orderForm').html(`
-                                <h2 class="H2">Wystapil blad podczas przesylania zamowienia</h2><h2 class="H2">Sprobuj ponownie</h2>
-                            `)
-                            console.log(result['message'])
+                            $('.orderError').html(`${result['message']}`)
                         }
                     }
-                }) 
+                })
             })          
         })        
     }

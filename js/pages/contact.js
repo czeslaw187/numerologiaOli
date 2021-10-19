@@ -54,7 +54,11 @@ export class ContactUs {
                 },
                 success:result=> {
                     if (result['message'] == 'ok') {
-                        $('#contactError').html(`Message sent`).css('color', 'green');
+                        $('#contactError').html(`Wiadomość wysłana`).css('color', 'green');
+                        $('#emailForm input#name').val('')
+                        $('#emailForm input#email').val('')
+                        $('#emailForm input#subject').val('')
+                        $('#emailForm textarea#msg').val('')
                     } else if (result['message'] == 'error') {
                         $('#contactError').html(`Error sending message`).css('color', 'red');
                     } else {

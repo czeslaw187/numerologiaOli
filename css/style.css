@@ -354,3 +354,8 @@ div.card-header {
     width: 100%;
     height: 100%
 }
+
+#orderForm, h2.text-justify {
+    font-family: 'Alegreya', serif;
+}
+

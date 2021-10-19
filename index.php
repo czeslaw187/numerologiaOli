@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="aythor" content="Grzegorz Michniewicz">
     <meta name="keywords" content="numerologia, terapia, rozwój duchowy">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
     <title></title>    
     <link rel="stylesheet" href="./vendors/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">    
@@ -52,8 +53,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
     <script src="./vendors/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>    
-    <script src="https://apis.google.com/js/platform.js"></script>
     <script src="./js/script.js" type="module"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html> 
 
