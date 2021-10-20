@@ -8,10 +8,10 @@ export class AboutMe {
         return `<div class="card mx-2 h-100" id="stronaOmnie">
                     <div class="card-body p-0 p-md-2">
                         <div class="row fadein">
-                            <div class="col-4 col-sm-12">
+                            <div class="col-sm-12 col-4">
                                 <img src="images/ola3.jpg" class="w-100 mr-3" />
                             </div>
-                            <div class="col-8 col-sm-12">
+                            <div class="col-sm-12 col-8">
                                 <h4 class="card-title mb-4">Kim jestem?</h4>
                                 <p class="card-text m-auto">
                                 Człowiekiem, który pławi się w szczęściu i radości, który jest wdzięczny za każde doświadczenie                  
