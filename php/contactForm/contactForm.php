@@ -97,7 +97,7 @@ if (isset($_POST['orderID'])) {
 }
 //send msg to me
 $newMsg->receiver = 'numerologia.aleksandra@gmail.com';
-$newMsg->msg = '<h3>' . $newMsg->sender . '</h3>' . '<h3>' . $newMsg->name . '</h3>'; 
+$newMsg->msg = $_POST['msg'] . '<h3>' . $newMsg->sender . '</h3>' . '<h3>' . $newMsg->name . '</h3>'; 
 $result = $newMsg->sendIt();
 if ($result) {
     $output['message'] = 'ok';
