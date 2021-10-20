@@ -212,7 +212,7 @@ export class ServicesUs {
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h2 class="H2 text-justify">Dziękuje za złożenie zamówienia, proszę o sprawdzenie swojego maila. </h2>
+                                            <h2 class="m-auto text-center p-3">Dziękuje za złożenie zamówienia, proszę o sprawdzenie swojego maila. </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +249,6 @@ export class ServicesUs {
             method: 'get',
             dataType: 'json',
             success: result=> {
-                console.log('baza')
                 result.forEach(row=> {
                     $('#opinionsContainer').append(`<div class="my-3" style="width: 100%;" id="useropinion${row['id']}">
                                                         <p class="py-0 my-0 mx-5 mx-md-3">${row['name']}</p>
