@@ -164,8 +164,8 @@ export class ServicesUs {
                                                 <div class="modal-content" id="modal-header">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="my-modal-title">${tytul}</h5>
-                                                        <h4 class="mx-auto">${cena}zl</h4>
-                                                        <button class="close" data-dismiss="modal" aria-label="Close">
+                                                        <h4 class="ml-auto">${cena}zl</h4>
+                                                        <button class="close ml-0" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
