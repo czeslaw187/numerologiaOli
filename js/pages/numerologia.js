@@ -42,6 +42,7 @@ export class Numerologia {
     }
 
     numerologiaHandler(theArr) {
+        $('#numerologiaBody .card-header h3').html('')
         $('#sectionPostyNumerologia ul a').bind('click', (e)=> {
             let article = theArr['text'].filter(i=> i['name'] == e.target.id)
             $('#numerologiaBody .card-body').html(article[0]['content'])
@@ -67,6 +68,7 @@ export class Numerologia {
 
     cyfraHandler() {
 
+        $('#numerologiaBody .card-header h3').html('')
         $('#obliczDrogeZycia input#day').mask('99-99-9999')
         $('#obliczDroge').bind('click', (e)=>{
             e.preventDefault()
