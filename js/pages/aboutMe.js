@@ -7,7 +7,7 @@ export class AboutMe {
 
         return `<div class="card mx-2 h-100" id="stronaOmnie">
                     <div class="card-body p-0 p-md-2">
-                        <div class="row fadein">
+                        <div class="row">
                             <div class="col-12 col-md-4">
                                 <img src="images/ola3.jpg" class="w-100 mr-3" />
                             </div>
