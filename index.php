@@ -8,6 +8,7 @@
     <meta name="keywords" content="numerologia, terapia, rozwój duchowy">
     <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
     <title></title>    
+    <link rel="shortcut icon" href="./images//logo_transparent.png" type="image/x-icon">
     <link rel="stylesheet" href="./vendors/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">    
     <link rel="preconnect" href="https://fonts.gstatic.com">    
