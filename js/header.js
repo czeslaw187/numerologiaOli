@@ -4,7 +4,7 @@ export class Header {
         return `<nav class='navbar navbar-expand-lg' style='height: 70px;>
                     <div class='container-fluid mb-auto'>                        
                         <button class='navbar-toggler ml-auto' type='button' data-toggle='collapse' data-target='#menuList'>
-                            <span><i class='fa fa-bars fa-2x'></i></span> 
+                            <span><i class='fa fa-bars fa-2x mr-4'></i></span> 
                         </button>
                     </div>
                     <div class='collapse navbar-collapse mb-0' id='menuList'>
