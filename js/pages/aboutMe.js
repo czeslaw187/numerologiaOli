@@ -64,7 +64,6 @@ export class AboutMe {
         return `<div class="card w-75 mt-5 mx-auto">
                     <div class="card-header text-center"><h3 class="w-100">FACEBOOK</h3></div>
                     <div class="card-body text-center w-100 px-0 pb-0 h-auto">
-                   
                         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNumerologia-klucz-do-%25C5%259Bwiadomego-%25C5%25BCycia-102955935259397&tabs=false&width=260&height=280&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="258" height="auto" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>

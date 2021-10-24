@@ -6,6 +6,7 @@ export class ServicesUs {
                         <h1>USŁUGI</h1>
                     </div>
                     <div class="card-body">
+                    <h5 class="text-center my-3"><strong><u>Czas oczekiwania na zamówienie to 7 dni roboczych od zaksięgowania wpłaty.</u></strong></h5>
                         <ul class="list-group list-group-flush" id="buyOptions"> 
 
                             <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
@@ -14,23 +15,23 @@ export class ServicesUs {
                                         <h4>Portret numerologiczny</h4>                            
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
-                                        <p class="price"><span>260</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction">Zamów</button>
+                                        <p class="price"><span>240</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
                                     </div>                                   
                                 </div>
                                 <p class="m-0">( Opis Twojego własnego scenariusza życia, drogi życia, klucza wcielenia )</p>
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaTarot" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaTarot">
-                                    Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez datę urodzenia oraz imiona i nazwiska, 
-                                    które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech, charakteru, to co wnosi w życie dzień urodzenia. 
-                                    Rozpisuje też diament życia, który mówi o energii w jakiej będziemy w danych momentach życia, 
-                                    co zaplanowaliśmy sobie na to wcielenie, z czym przyjdzie się nam zmierzyć, 
-                                    czyli jakie wyzwania sobie wybraliśmy schodząc do tej reinkarnacji. Dowiesz się też nad czym powinieneś pracować, 
-                                    co jest Twoją mocną stroną, jaki jest cel Twojego życia, jaki wpływ na Twoje życie mają relacje z rodzicami. 
-                                    Przede wszystkim dowiesz się, że wszystko to zostało zapisane a Twoim zadaniem jest to świadomie realizować, 
-                                    świadomość pozwala na lepsze spojrzenie na swoje życie i siebie. Portret wysyłam w formie pisemnej na maila. 
-                                    Jest szansa rozmowy telefonicznej po wcześniejszym uzgodnieniu.  Masz pytania? Pisz.  
+                                        Portret numerologiczny to pełen opis danej osoby, opisu tego dokonuje poprzez odczytanie informacji zapisanych w 
+                                        dacie urodzenia oraz imionach i nazwisku, które dana osoba posiada. Daje on nam analizę osobowości, pełen opis cech,
+                                        charakteru, potencjału na to życie. Rozpisuje też diament życia, który mówi o energii, w jakiej będziemy w danych momentach życia, 
+                                        co zaplanowaliśmy sobie na to wcielenie, z czym przyjdzie się nam zmierzyć, czyli jakie wyzwania sobie wybraliśmy schodząc do tej reinkarnacji.
+                                        Dowiesz się też, nad czym powinieneś pracować, co jest Twoją mocną stroną, jaki jest cel Twojego życia, jaki wpływ na Twoje życie mają relacje z rodzicami.
+                                        Przede wszystkim dowiesz się, że wszystko to zostało zapisane a Twoim zadaniem jest to świadomie realizować, świadomość pozwala na lepsze spojrzenie na swoje 
+                                        życie i siebie. Portret wysyłam w formie pisemnej na maila. Jest szansa rozmowy telefonicznej po wcześniejszym uzgodnieniu. Jest to pełen opis Ciebie,
+                                        Twoich celów na to życie, wyzwań jakie przyjdzie Ci przeżyć, talenty jakie posiadasz, wady,  przez ten odczyt numerologiczny zrozumiesz wiele zdarzeń w 
+                                        swoim życiu jakie miały miejsca oraz te które nadejdą, łatwiej Ci będzie zrozumieć czemu masz właśnie takie życie oraz co robić by je ulepszyć.  Masz pytania? Pisz.  
                                     </div>
                                 </div>
                             </li>
@@ -41,18 +42,18 @@ export class ServicesUs {
                                         <h4>Rozmowa terapeutyczno – numerologiczna</h4>                           
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
-                                        <p class="price"><span>150</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
+                                        <p class="price"><span>180</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction4">Zamów</button>
                                     </div>                                   
                                 </div>
                                 <p class="m-0">( Rozmowa terapeutyczna wykorzystująca wiedzę numerologiczną)</p>  
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaTerapeutyczna" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaTerapeutyczna">
-                                    Czujesz, że Twoje życie nie jest takie jak byś chciał, masz pewne obawy życiowe, problemy, 
-                                    chcesz zrozumieć siebie, swoje doświadczenia w życiu które Cie spotykają, poznać przyczynę wydarzeń w swoim życiu. 
-                                    Rozmowa będzie ukierunkowana na potrzeby osoby zamawiającej, na podstawie jej scenariusza zapisanego w jego dacie,  
-                                    imionach i nazwiskach jakie posiada. Czas rozmowy 6o minut. Rozmowa telefoniczna.   
+                                        Czujesz, że Twoje życie nie jest takie jak byś chciał, masz pewne obawy życiowe, problemy, 
+                                        chcesz zrozumieć siebie, swoje doświadczenia w życiu, które Cie spotykają, poznać przyczynę wydarzeń w swoim życiu? 
+                                        Rozmowa będzie ukierunkowana na potrzeby osoby zamawiającej, na podstawie jej scenariusza zapisanego w jego dacie,  
+                                        imionach i nazwiskach, jakie posiada. Czas rozmowy 60 minut. Rozmowa telefoniczna.    
                                     </div>
                                 </div>
                             </li>
@@ -64,17 +65,19 @@ export class ServicesUs {
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
                                         <p class="price"><span>160</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
+                                        <button role="button" class="btn btn-success" id="transaction3">Zamów</button>
                                     </div>                                   
                                 </div>
                                 <p class="m-0">( Energetyka imienia może wiele zmienić, warto dobrać je tak aby było ono korzystne)</p>
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaPara" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaPara">
-                                    Świadome dobranie dziecku odpowiedniego imienia może go odpowiednio wzmocnić, 	
-                                    dać mu pełen wachlarz możliwości w życiu, realizowaniu siebie. Dobieramy imię do daty urodzenia i nazwiska, 
-                                    tak aby tworzyło z nimi całość zgodną z założeniami duszy. 
-                                    Imię  i jego energia bardzo dużo wnoszą w życie danej osoby, więc warto zrobić to starannie i ze świadomością. 
+                                        Świadome dobranie dziecku odpowiedniego imienia może go odpowiednio wzmocnić, 	
+                                        dać mu pełen wachlarz możliwości w życiu, realizowaniu siebie. Dobieramy imię do 	
+                                        daty urodzenia i nazwiska, tak, aby tworzyło z nimi całość zgodną z założeniami 	
+                                        duszy. Imię i jego energia bardzo dużo wnoszą w życie danej osoby, więc warto 	
+                                        zrobić to starannie i ze świadomością tak aby portret numerologiczny osoby był 	
+                                        harmonijny i zgodny z jej przeznaczeniem.  
                                     </div>
                                 </div>
                             </li>
@@ -93,9 +96,9 @@ export class ServicesUs {
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaPrzeslanie" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaPrzeslanie">
-                                    Opis taki zawiera informacje o dopasowaniu dwóch  energii, czy jest ona korzystna, 
-                                    czy będzie wymagać więcej pracy nad związkiem i kompromisów. Na co zwrócić uwagę w związku, oraz opis tych energii.  
-                                    Pozwoli to lepiej zrozumieć swoją drugą połówkę oraz spojrzeć na sprawę oczami tej drugiej osoby.  
+                                        Opis taki zawiera informacje o dopasowaniu dwóch energii, czy jest ona korzystna, 
+                                        czy będzie wymagać więcej pracy nad związkiem i kompromisów. Na co zwrócić uwagę w związku, 
+                                        oraz opis tych energii.  Pozwoli to lepiej zrozumieć swoją drugą połówkę oraz spojrzeć na sprawę oczami tej drugiej osoby.    
                                     </div>
                                 </div>
                             </li>
@@ -106,20 +109,19 @@ export class ServicesUs {
                                         <h4>Przesłanie od Wróżek</h4>                           
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
-                                        <p class="price"><span>95</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
+                                        <p class="price"><span>80</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
                                     </div>                                   
                                 </div>
-                                <p class="m-0">( Rokad trzech kart podpowiedzi + karta anielska )</p>
+                                <p class="m-0">( Rokład trzech kart podpowiedzi + karta anielska )</p>
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaDobor" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaDobor">
-                                    Przesłania od Wróżek pozwolą Ci na zwrócenie uwagi na istotne kwestie w konkretnym przedziale czasu, 
-                                    dadzą podpowiedzi abyś mógł lepiej i świadomie wykorzystać swoje szanse i okazję. 
-                                    Czasem bardzo prosta podpowiedz otwiera oczy na pewne sprawy, uświadamia nam ukryte problemy, 
-                                    które my wypieramy oraz jest wsparciem od Wróżek, które dobrze wiedza co Ci doradzić i co dla Ciebie 
-                                    na ten moment jest najważniejsze. Czasem nad czymś myślimy, zastanawiamy  się  i taka podpowiedz od kart daje nam pewność, 
-                                    impuls, że nasza intuicja nas nie myli.   
+                                        Przesłania od Wróżek pozwolą Ci na zwrócenie uwagi na istotne kwestie                             
+                                        w konkretnym przedziale czasu, dadzą podpowiedzi abyś mógł lepiej i świadomie wykorzystać swoje szanse i okazję. 
+                                        Czasem bardzo prosta podpowiedz otwiera oczy na pewne sprawy, uświadamia nam ukryte problemy, które my wypieramy 
+                                        oraz jest wsparciem od Wróżek, które dobrze wiedza, co Ci doradzić i co dla Ciebie na ten moment jest najważniejsze. 
+                                        Czasem nad czymś myślimy, zastanawiamy się i taka podpowiedz od kart daje nam pewność, impuls, że nasza intuicja nas nie myli.   
                                     </div>
                                 </div>
                             </li>
@@ -127,21 +129,110 @@ export class ServicesUs {
                             <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
                                 <div class="row py-2">                                               
                                     <div class="col-8">
-                                        <h4>Dobór kryształu, kamienia do problemu</h4>                           
+                                        <h4>Roczny rozkład tarota</h4>                           
                                     </div>
                                     <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
-                                        <p class="price"><span>65</span>zł</p>
-                                        <button role="button" class="btn btn-success" id="transaction1">Zamów</button>
+                                        <p class="price"><span>140</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
                                     </div>                                   
                                 </div>
-                                <p class="m-0">( Napisz mi o swoim problemie, a ja podam Ci który z kryształów, kamieni wzmocni Cię )</p>
+                                <p class="m-0">( Rozkład na dwanaście miesięcy, ogólna energia każdego miesiąca, z karta podpowiedzią )</p>
                                 <div class="row">                                    
                                     <a type="button" data-toggle="collapse" data-target="#ofertaKam" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
                                     <div class="collapse" id="ofertaKam">
-                                    Każdy kryształ, kamień ma swoją unikalną i niepowtarzalną moc, dzięki  ich energii możemy wzmocnić siebie, 
-                                    te obszary które wywołują u nas problemy np. problemy finansowe, problemy z wyrażaniem siebie, wzmocnienie duchowe, 
-                                    oczyszczanie. Kryształ, kamień nie zmieni tego w jeden dzień, oraz nie zrobi nic za Ciebie, ale będzie Cie wspierał energetycznie, 
-                                    wzmacniał tam gdzie czujesz się słaby, w obszarze problematycznym Twojego życia.    
+                                        Roczny rozkład zaczynamy od miesiąca, w którym obecnie będziemy się znajdować i rozkładamy karty na kolejne 12 miesięcy. 
+                                        Sprawdzimy, jaka energia będzie towarzyszyć w każdym z tych miesięcy, na co zwrócić uwagę, jaki dany rok będzie. 
+                                        Czy przyniesie dużo zmian, czy może będzie to spokojny i harmonijny rok. Wyciągnę też kartę radę. Pamiętajmy też, 
+                                        że na pewne rzeczy mamy wpływ i możemy je zmienić lub ich uniknąć, są też takie, które zostały zaplanowane 
+                                        jeszcze przez naszym urodzeniem, tego nie zmienimy możemy tylko to zaakceptować.     
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
+                                <div class="row py-2">                                               
+                                    <div class="col-8">
+                                        <h4>Pytanie do tarota</h4>                           
+                                    </div>
+                                    <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
+                                        <p class="price"><span>35</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
+                                    </div>                                   
+                                </div>
+                                <p class="m-0"></p>
+                                <div class="row">                                    
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaPytanieTarot" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
+                                    <div class="collapse" id="ofertaPytanieTarot">
+                                        Męczy Cie jakieś pytanie? Potrzebujesz podpowiedzi? Chcesz po prostu wiedzieć? 
+                                        Zapytajmy kart, zobaczmy, co chcą nam przekazać. Pytanie może dotyczyć każdej sfery życia 
+                                        ( praca, związek, czy uda się kupić nowy dom itd.) . Nie odpowiadam na pytania dotyczące śmierci. 
+                                        Cena dotyczy jednego pytania, oczywiście dokładnie je omówię, wyciągnę też kartę radę. Wyciągniemy 
+                                        też kartę Anielskie odpowiedzi.      
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
+                                <div class="row py-2">                                               
+                                    <div class="col-8">
+                                        <h4>Tarot praca – miłość</h4>                           
+                                    </div>
+                                    <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
+                                        <p class="price"><span>35</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
+                                    </div>                                   
+                                </div>
+                                <p class="m-0"></p>
+                                <div class="row">                                    
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaTarotMilosc" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
+                                    <div class="collapse" id="ofertaTarotMilosc">
+                                    Rozkład na pracę i miłość. Zobaczymy, co czeka w pracy, oraz miłości. Oczywiście proszę o informację czy jesteś singlem czy w związku, 
+                                    wtedy sprawdzimy, co ciekawego mówią karty. Prosty rozkład na cały miesiąc.       
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
+                                <div class="row py-2">                                               
+                                    <div class="col-8">
+                                        <h4>Kryształowe przesłanie aniołów</h4>                           
+                                    </div>
+                                    <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
+                                        <p class="price"><span>35</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
+                                    </div>                                   
+                                </div>
+                                <p class="m-0"></p>
+                                <div class="row">                                    
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaKrysztalowePrzeslanie" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
+                                    <div class="collapse" id="ofertaKrysztalowePrzeslanie">
+                                        Anioły posiadają cudowną moc, która też możemy odczuć w kartach. Są ona blisko nas, znają nas i wiedzą o nas bardzo dużo. 
+                                        Lubię je pytać poprzez kart o wiele rzeczy. Karty kryształowe przesłanie aniołów łączą w sobie moc kryształów i tą piękną Anielską. 
+                                        To bardzo magiczne karty. Korzystam z kart DR DOREEN VIRTUE. Karta pokaże nam przesłanie, które jest najważniejsze na dany moment dla osoby, 
+                                        która korzysta z tej usługi. Wyciągniemy tez kartę klucze Anielskie, to kolejna mała podpowiedz.        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item"><span class="fa fa-caret-right fa-2x"></span>
+                                <div class="row py-2">                                               
+                                    <div class="col-8">
+                                        <h4>Co Twoja dusza chce Ci powiedzieć</h4>                           
+                                    </div>
+                                    <div class="col-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-end align-items-start">
+                                        <p class="price"><span>35</span>zł</p>
+                                        <button role="button" class="btn btn-success" id="transaction2">Zamów</button>
+                                    </div>                                   
+                                </div>
+                                <p class="m-0"></p>
+                                <div class="row">                                    
+                                    <a type="button" data-toggle="collapse" data-target="#ofertaTwojaDusza" class="ml-auto mr-5 btn btn-secondary">więcej...</a> 
+                                    <div class="collapse" id="ofertaTwojaDusza">
+                                        Te karty nie są dla każdego. Czy na pewno jesteś gotowy, aby połączyć się ze swoja duszą i przyjąć to, 
+                                        co ma Ci do przekazania? Są to na pewno karty dla osoby rozwijającej się duchowo, która sama nie potrafi 
+                                        się jeszcze połączyć z duszą a czuje potrzebę bycia bliżej niej, karty to fajny krok by pokazać, że ważne jest dla nas to, 
+                                        jaki ona ma plan i pozwolić jej dojść do głosu. Czy jesteś gotów usłyszeć szept Twojej duszy? Jest wyciągana tylko jedna 
+                                        karta z opisem dość obszernym.         
                                     </div>
                                 </div>
                             </li>
